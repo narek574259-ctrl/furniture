@@ -1,846 +1,435 @@
 
-const resources = {
-  en: {
-    translation: {
-      nav: { home: "Home", menu: "Menu", gallery: "Gallery", reviews: "Reviews", about: "About", contact: "Contact", login: "Log in", register: "Sign up", admin: "Admin" },
-      nav: { home: "Home", menu: "Catalog", gallery: "Showrooms", reviews: "Reviews", about: "About", contact: "Contact", login: "Log in", register: "Sign up", admin: "Admin" },
-      hero: {
-        tag: "Smashed. Stacked. Served.",
-        title: "Burgers built\nfor the hungry.",
-        sub: "Hand-pressed patties, fresh-baked buns, and sauces we make from scratch every single morning.",
-        cta1: "Order now",
-        cta2: "See the menu",
-        tag: "Crafted. Curated. Delivered.",
-        title: "Furniture made\nfor slow living.",
-        sub: "Hand-finished hardwood, natural fabrics, and quietly beautiful pieces built to last a generation.",
-        cta1: "Shop the catalog",
-        cta2: "Visit a showroom",
-      },
-      menu: {
-        title: "The Menu",
-        sub: "Six signatures. Zero shortcuts.",
-        all: "All", classic: "Classic", spicy: "Spicy", veggie: "Veggie",
-        search: "Search burgers...",
-        order: "Add to order",
-        title: "The Catalog",
-        sub: "Six signatures. Studio-built, ready to ship.",
-        all: "All", classic: "Sofas", spicy: "Chairs", veggie: "Tables & Beds",
-        search: "Search furniture...",
-        order: "Add to cart",
-        items: {
-          classic: { name: "The Classic", desc: "Smashed beef, cheddar, lettuce, tomato, secret sauce.", price: 9.5 },
-          double: { name: "Double Trouble", desc: "Two patties, double cheese, caramelized onions, bacon.", price: 13.0 },
-          spicy: { name: "Inferno", desc: "Jalapeños, pepper jack, chipotle aioli, crispy onions.", price: 11.5 },
-          bbq: { name: "Smokehouse", desc: "BBQ-glazed beef, bacon, onion rings, smoked cheddar.", price: 12.5 },
-          veggie: { name: "Green Machine", desc: "Black-bean patty, avocado, radish, sprouts, tahini.", price: 10.0 },
-          truffle: { name: "Truffle Royale", desc: "Wagyu, truffle mayo, gruyère, caramelized shallot.", price: 16.0 },
-          classic: { name: "Linden Curve Sofa", desc: "Three-seat bouclé sofa with sculpted curves and walnut feet.", price: 2490 },
-          double: { name: "Halden Settee", desc: "Compact two-seater in natural linen with tapered hardwood legs.", price: 1690 },
-          spicy: { name: "Atlas Lounge Chair", desc: "Tan leather lounge with bent walnut frame and matching ottoman.", price: 1890 },
-          bbq: { name: "Roma Pedestal Table", desc: "Solid walnut dining table on a hand-shaped sculptural base.", price: 2890 },
-          veggie: { name: "Møller Platform Bed", desc: "Low oak frame with linen-upholstered headboard. Queen / King.", price: 2190 },
-          truffle: { name: "Aria Marble Table", desc: "Honed Carrara marble coffee table on a brushed brass plinth.", price: 1390 },
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Atelier Maison | Furniture for Slow Living</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#561a02",
+                    "primary-fixed-dim": "#e7bea5",
+                    "tertiary-fixed-dim": "#ffb59b",
+                    "on-background": "#1b1c19",
+                    "on-surface-variant": "#50453e",
+                    "primary": "#412817",
+                    "surface-variant": "#e3e3de",
+                    "on-secondary-fixed": "#101f10",
+                    "surface-container-highest": "#e3e3de",
+                    "inverse-on-surface": "#f2f1ec",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#5d412d",
+                    "surface-dim": "#dbdad5",
+                    "tertiary-fixed": "#ffdbcf",
+                    "on-tertiary-container": "#f99976",
+                    "tertiary-container": "#733015",
+                    "secondary-fixed": "#d5e8cf",
+                    "primary-container": "#5a3e2b",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#586955",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#efeee9",
+                    "inverse-primary": "#e7bea5",
+                    "on-primary-container": "#d1aa91",
+                    "on-primary": "#ffffff",
+                    "primary-fixed": "#ffdcc6",
+                    "on-secondary-fixed-variant": "#3b4b39",
+                    "inverse-surface": "#30312e",
+                    "surface-container-low": "#f5f4ef",
+                    "background": "#faf9f4",
+                    "on-surface": "#1b1c19",
+                    "secondary": "#526350",
+                    "surface": "#faf9f4",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#b9ccb4",
+                    "surface-bright": "#faf9f4",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#763217",
+                    "surface-tint": "#775843",
+                    "outline-variant": "#d3c3bb",
+                    "outline": "#82746d",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#380d00",
+                    "on-primary-fixed": "#2c1607",
+                    "surface-container-high": "#e9e8e3",
+                    "secondary-container": "#d5e8cf"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "lg": "48px",
+                    "xl": "80px",
+                    "md": "24px",
+                    "xs": "4px",
+                    "container-max": "1280px",
+                    "base": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "headline-md": ["EB Garamond"],
+                    "display-lg": ["EB Garamond"],
+                    "display-lg-mobile": ["EB Garamond"],
+                    "headline-sm": ["EB Garamond"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
         },
-      },
-      gallery: { title: "From the grill", sub: "Hot off the cast iron." },
-      gallery: { title: "Inside our showrooms", sub: "Rooms styled to live in." },
-      reviews: {
-        title: "Loved by locals",
-        sub: "Real bites. Real words.",
-        title: "Loved at home",
-        sub: "Words from people who live with our pieces.",
-        list: [
-          { name: "Mariam K.", text: "Best burger I've had this side of the city. The Inferno is a religious experience." },
-          { name: "David A.", text: "Truffle Royale changed my life. Bun was warm. Cheese was molten. 10/10." },
-          { name: "Elena S.", text: "Cozy spot, friendly staff, and the Green Machine actually slaps." },
-          { name: "Mariam K.", text: "The Linden sofa anchors our entire living room. Five-star delivery, white-glove install." },
-          { name: "David A.", text: "Walnut grain on the Roma table is unreal. Better than the showroom photo." },
-          { name: "Elena S.", text: "Møller bed arrived ahead of schedule. Solid, quiet, and beautiful." },
-        ],
-      },
-      contact: {
-        title: "Stop by, say hi",
-        sub: "Open daily 11am – 11pm",
-        title: "Come sit with us",
-        sub: "Mon–Sat 10am – 8pm · Sun 12 – 6pm",
-        name: "Your name", email: "Email", message: "Message", send: "Send message",
-        sent: "Thanks — we'll be in touch.",
-        sent: "Thanks — a designer will be in touch.",
-        address: "12 Northern Avenue, Yerevan",
-        phone: "+374 10 555 000",
-      },
-      about: {
-        title: "Our story",
-        p1: "Burgers Home started in a one-grill garage in 2015. One cook, one cast-iron skillet, and a stubborn belief that a burger should taste like somebody actually cared.",
-        p2: "Ten years later, we're still smashing patties by hand. Buns baked daily. Beef ground in-house. Sauces from scratch every morning.",
-        p3: "No freezers. No shortcuts. Just the burger you remember from the best day of your childhood — only better.",
-        title: "Our craft",
-        p1: "Atelier Maison began in 2015 as a two-person workshop in Yerevan, hand-building chairs from reclaimed Armenian walnut.",
-        p2: "Ten years later we design every piece in-house, mill our own hardwood, and finish each frame by hand before it leaves the studio.",
-        p3: "No fast furniture. No flat-pack shortcuts. Just considered, durable, quietly beautiful pieces you'll keep for life.",
-      },
-      auth: {
-        loginTitle: "Welcome back", loginSub: "Sign in to track orders and save favorites.",
-        registerTitle: "Join the Home", registerSub: "Create an account for faster checkout and rewards.",
-        loginTitle: "Welcome back", loginSub: "Sign in to track orders and save your room boards.",
-        registerTitle: "Create an account", registerSub: "Faster checkout, order tracking, and trade pricing.",
-        email: "Email", password: "Password", name: "Full name", confirm: "Confirm password",
-        signIn: "Sign in", createAccount: "Create account",
-        noAccount: "No account?", haveAccount: "Already a member?",
-      },
-      footer: {
-        tag: "Smashed with love since 2015.",
-        tag: "Designed and built in Yerevan since 2015.",
-        rights: "All rights reserved.",
-        explore: "Explore", follow: "Follow us", visit: "Visit",
-        explore: "Shop", follow: "Follow us", visit: "Showroom",
-      },
-      admin: {
-        title: "Admin dashboard",
-  },
-  ru: {
-    translation: {
-      nav: { home: "Главная", menu: "Меню", gallery: "Галерея", reviews: "Отзывы", about: "О нас", contact: "Контакты", login: "Войти", register: "Регистрация", admin: "Админ" },
-      nav: { home: "Главная", menu: "Каталог", gallery: "Шоурумы", reviews: "Отзывы", about: "О нас", contact: "Контакты", login: "Войти", register: "Регистрация", admin: "Админ" },
-      hero: {
-        tag: "Жарим. Складываем. Подаём.",
-        title: "Бургеры\nдля голодных.",
-        sub: "Котлеты вручную, свежевыпеченные булочки и соусы, которые мы готовим с нуля каждое утро.",
-        cta1: "Заказать",
-        cta2: "Смотреть меню",
-        tag: "Сделано. Подобрано. Доставлено.",
-        title: "Мебель\nдля медленной жизни.",
-        sub: "Массив дерева ручной отделки, натуральные ткани и предметы, которые служат поколениями.",
-        cta1: "Смотреть каталог",
-        cta2: "Посетить шоурум",
-      },
-      menu: {
-        title: "Наше меню",
-        sub: "Шесть фирменных. Без компромиссов.",
-        all: "Все", classic: "Классика", spicy: "Острые", veggie: "Веган",
-        search: "Поиск бургеров...",
-        order: "В заказ",
-        title: "Каталог",
-        sub: "Шесть фирменных моделей. Готовы к отправке.",
-        all: "Все", classic: "Диваны", spicy: "Кресла", veggie: "Столы и кровати",
-        search: "Поиск мебели...",
-        order: "В корзину",
-        items: {
-          classic: { name: "Классик", desc: "Говядина, чеддер, салат, помидор, фирменный соус.", price: 9.5 },
-          double: { name: "Двойной удар", desc: "Две котлеты, двойной сыр, карамелизированный лук, бекон.", price: 13.0 },
-          spicy: { name: "Инферно", desc: "Халапеньо, пеппер джек, чипотле айоли, хрустящий лук.", price: 11.5 },
-          bbq: { name: "Смокхаус", desc: "Говядина BBQ, бекон, луковые кольца, копчёный чеддер.", price: 12.5 },
-          veggie: { name: "Зелёная машина", desc: "Котлета из чёрной фасоли, авокадо, редис, ростки, тахини.", price: 10.0 },
-          truffle: { name: "Трюфель Рояль", desc: "Вагю, трюфельный майонез, грюйер, шалот.", price: 16.0 },
-          classic: { name: "Диван Linden", desc: "Трёхместный диван из букле с изогнутым силуэтом и ножками из ореха.", price: 2490 },
-          double: { name: "Софа Halden", desc: "Компактная двухместная софа из натурального льна.", price: 1690 },
-          spicy: { name: "Кресло Atlas", desc: "Кожаное кресло-лаунж с гнутым каркасом из ореха и пуфом.", price: 1890 },
-          bbq: { name: "Стол Roma", desc: "Обеденный стол из массива ореха на скульптурном основании.", price: 2890 },
-          veggie: { name: "Кровать Møller", desc: "Низкий дубовый каркас с льняным изголовьем. Queen / King.", price: 2190 },
-          truffle: { name: "Стол Aria", desc: "Журнальный стол из мрамора Каррара на латунном основании.", price: 1390 },
-        },
-      },
-      gallery: { title: "Прямо с гриля", sub: "Только что со сковороды." },
-      gallery: { title: "В наших шоурумах", sub: "Интерьеры, в которых хочется жить." },
-      reviews: {
-        title: "Любимы местными",
-        sub: "Настоящие отзывы.",
-        title: "Любимы дома",
-        sub: "Слова тех, кто живёт с нашей мебелью.",
-        list: [
-          { name: "Мариам К.", text: "Лучший бургер в городе. Инферно — это просто восторг." },
-          { name: "Давид А.", text: "Трюфель Рояль изменил мою жизнь. Сыр тает, булка тёплая. 10/10." },
-          { name: "Елена С.", text: "Уютное место, приветливые люди, Зелёная машина — огонь." },
-          { name: "Мариам К.", text: "Диван Linden — сердце нашей гостиной. Идеальная доставка и сборка." },
-          { name: "Давид А.", text: "Текстура ореха на столе Roma невероятная. Лучше, чем на фото." },
-          { name: "Елена С.", text: "Кровать Møller приехала раньше срока. Прочная, тихая, красивая." },
-        ],
-      },
-      contact: {
-        title: "Заходите в гости",
-        sub: "Каждый день 11:00 – 23:00",
-        title: "Заходите к нам",
-        sub: "Пн–Сб 10:00 – 20:00 · Вс 12:00 – 18:00",
-        name: "Ваше имя", email: "Email", message: "Сообщение", send: "Отправить",
-        sent: "Спасибо — мы свяжемся с вами.",
-        sent: "Спасибо — наш дизайнер свяжется с вами.",
-        address: "Проспект Северный 12, Ереван",
-        phone: "+374 10 555 000",
-      },
-      about: {
-        title: "Наша история",
-        p1: "Burgers Home начался в гараже с одним грилем в 2015 году. Один повар, одна чугунная сковорода и упрямая вера в то, что бургер должен быть сделан с душой.",
-        p2: "Десять лет спустя мы всё ещё делаем котлеты вручную. Булочки печём ежедневно. Мясо рубим у себя. Соусы — каждое утро.",
-        p3: "Никаких морозилок. Никаких компромиссов. Только тот бургер, который вы помните с лучшего дня детства — но ещё лучше.",
-        title: "Наше ремесло",
-        p1: "Atelier Maison начался в 2015 году как мастерская двух человек в Ереване — мы делали стулья из армянского ореха.",
-        p2: "Десять лет спустя мы проектируем каждую вещь сами, обрабатываем массив у себя и отделываем каждый каркас вручную.",
-        p3: "Никакой быстрой мебели. Только продуманные, долговечные и тихо красивые предметы — на всю жизнь.",
-      },
-      auth: {
-        loginTitle: "С возвращением", loginSub: "Войдите, чтобы отслеживать заказы и сохранять избранное.",
-        registerTitle: "Присоединяйтесь", registerSub: "Создайте аккаунт для быстрого оформления и бонусов.",
-        loginTitle: "С возвращением", loginSub: "Войдите, чтобы отслеживать заказы и сохранять подборки.",
-        registerTitle: "Создать аккаунт", registerSub: "Быстрая оплата, отслеживание и трейд-цены.",
-        email: "Email", password: "Пароль", name: "Полное имя", confirm: "Подтвердите пароль",
-        signIn: "Войти", createAccount: "Создать аккаунт",
-        noAccount: "Нет аккаунта?", haveAccount: "Уже с нами?",
-      },
-      footer: {
-        tag: "Жарим с любовью с 2015 года.",
-        tag: "Создаём в Ереване с 2015 года.",
-        rights: "Все права защищены.",
-        explore: "Разделы", follow: "Соцсети", visit: "Адрес",
-        explore: "Магазин", follow: "Соцсети", visit: "Шоурум",
-      },
-      admin: {
-        title: "Админ панель",
-  },
-  hy: {
-    translation: {
-      nav: { home: "Գլխավոր", menu: "Մենյու", gallery: "Պատկերասրահ", reviews: "Կարծիքներ", about: "Մեր մասին", contact: "Կապ", login: "Մուտք", register: "Գրանցում", admin: "Ադմին" },
-      nav: { home: "Գլխավոր", menu: "Կատալոգ", gallery: "Սրահներ", reviews: "Կարծիքներ", about: "Մեր մասին", contact: "Կապ", login: "Մուտք", register: "Գրանցում", admin: "Ադմին" },
-      hero: {
-        tag: "Տրորված։ Շարված։ Մատուցված։",
-        title: "Բուրգերներ\nքաղցածների համար։",
-        sub: "Ձեռքով պատրաստված կոտլետներ, թարմ թխած բուլկիներ և սոուսներ՝ ամեն առավոտ զրոյից։",
-        cta1: "Պատվիրել",
-        cta2: "Տեսնել մենյուն",
-        tag: "Ձեռագործ։ Ընտրված։ Առաքված։",
-        title: "Կահույք՝\nհանգիստ կյանքի համար։",
-        sub: "Ձեռքով մշակված կարծր փայտ, բնական գործվածքներ և իրեր, որոնք ծառայում են սերունդներ։",
-        cta1: "Տեսնել կատալոգը",
-        cta2: "Այցելել սրահ",
-      },
-      menu: {
-        title: "Մենյու",
-        sub: "Վեց ֆիրմային։ Առանց զիջումների։",
-        all: "Բոլորը", classic: "Դասական", spicy: "Կծու", veggie: "Բուսական",
-        search: "Որոնել բուրգեր...",
-        order: "Ավելացնել",
-        title: "Կատալոգ",
-        sub: "Վեց ֆիրմային մոդել։ Ստուդիայում պատրաստված։",
-        all: "Բոլորը", classic: "Բազմոցներ", spicy: "Բազկաթոռներ", veggie: "Սեղաններ և մահճակալներ",
-        search: "Որոնել կահույք...",
-        order: "Զամբյուղ",
-        items: {
-          classic: { name: "Դասական", desc: "Տավարի միս, չեդար, սալաթ, լոլիկ, գաղտնի սոուս։", price: 9.5 },
-          double: { name: "Կրկնակի հարված", desc: "Երկու կոտլետ, կրկնակի պանիր, քարամելացված սոխ, բեկոն։", price: 13.0 },
-          spicy: { name: "Ինֆերնո", desc: "Խալապենո, պեպեր ջեք, չիպոտլե այոլի, ճռճռան սոխ։", price: 11.5 },
-          bbq: { name: "Սմոքհաուս", desc: "BBQ տավար, բեկոն, սոխի օղակներ, ապխտած չեդար։", price: 12.5 },
-          veggie: { name: "Կանաչ մեքենա", desc: "Սև լոբու կոտլետ, ավոկադո, բողկ, ծիլեր, թահինի։", price: 10.0 },
-          truffle: { name: "Տրյուֆել Ռոյալ", desc: "Վագյու, տրյուֆելի մայոնեզ, գրյուեր, շալոտ։", price: 16.0 },
-          classic: { name: "Linden բազմոց", desc: "Եռատեղ բուկլե բազմոց՝ քանդակագործ ուրվագծով և ընկույզի ոտքերով։", price: 2490 },
-          double: { name: "Halden սոֆա", desc: "Կոմպակտ երկտեղ սոֆա՝ բնական կտավից։", price: 1690 },
-          spicy: { name: "Atlas բազկաթոռ", desc: "Կաշվե բազկաթոռ՝ ընկույզի ծռված շրջանակով և թիկնակով։", price: 1890 },
-          bbq: { name: "Roma սեղան", desc: "Ընկույզի մասիվից ճաշասեղան՝ քանդակագործ հենարանով։", price: 2890 },
-          veggie: { name: "Møller մահճակալ", desc: "Կաղնու ցածր շրջանակ՝ կտավով գլխամասով։ Queen / King։", price: 2190 },
-          truffle: { name: "Aria մարմարե սեղան", desc: "Կարարա մարմարից սուրճի սեղան՝ արույրե հենարանով։", price: 1390 },
-        },
-      },
-      gallery: { title: "Գրիլից ուղիղ", sub: "Թարմ՝ թավայից։" },
-      gallery: { title: "Մեր սրահներում", sub: "Ինտերիերներ, որոնցում ուզում ես ապրել։" },
-      reviews: {
-        title: "Տեղացիների սերը",
-        sub: "Իրական խոսքեր։",
-        title: "Սիրված տանը",
-        sub: "Մարդկանց խոսքերը, ովքեր ապրում են մեր կահույքի հետ։",
-        list: [
-          { name: "Մարիամ Կ.", text: "Քաղաքի լավագույն բուրգերը։ Ինֆերնոն՝ իսկական հաճույք։" },
-          { name: "Դավիթ Ա.", text: "Տրյուֆել Ռոյալը փոխեց իմ կյանքը։ Տաք բուլկի, հալված պանիր։ 10/10։" },
-          { name: "Ելենա Ս.", text: "Հարմարավետ տեղ, սիրալիր մարդիկ, Կանաչ մեքենան՝ կրակ։" },
-          { name: "Մարիամ Կ.", text: "Linden բազմոցը մեր հյուրասենյակի սիրտն է։ Կատարյալ առաքում և տեղադրում։" },
-          { name: "Դավիթ Ա.", text: "Roma սեղանի ընկույզի հյուսվածքը անհավանական է։ Ավելի լավը, քան լուսանկարում։" },
-          { name: "Ելենա Ս.", text: "Møller մահճակալը ժամանեց ժամկետից շուտ։ Ամուր, հանգիստ, գեղեցիկ։" },
-        ],
-      },
-      contact: {
-        title: "Անցեք, ողջունեք",
-        sub: "Ամեն օր 11:00 – 23:00",
-        title: "Անցեք մեզ մոտ",
-        sub: "Երկ–Շբթ 10:00 – 20:00 · Կիր 12:00 – 18:00",
-        name: "Ձեր անունը", email: "Էլ. փոստ", message: "Հաղորդագրություն", send: "Ուղարկել",
-        sent: "Շնորհակալություն — մենք կկապվենք։",
-        sent: "Շնորհակալություն — դիզայները կկապվի ձեզ հետ։",
-        address: "Հյուսիսային պողոտա 12, Երևան",
-        phone: "+374 10 555 000",
-      },
-      about: {
-        title: "Մեր պատմությունը",
-        p1: "Burgers Home-ը սկսվել է 2015 թվականին մեկ գրիլով ավտոտնակում։ Մեկ խոհարար, մեկ չուգուն թավա և համոզմունք, որ բուրգերը պետք է լինի սրտով։",
-        p2: "Տասը տարի անց մենք դեռ ձեռքով ենք պատրաստում կոտլետները։ Բուլկիները թխվում են ամեն օր։ Միսը աղում ենք տանը։ Սոուսները՝ ամեն առավոտ։",
-        p3: "Ոչ սառցարան։ Ոչ զիջում։ Միայն այն բուրգերը, որը հիշում ես մանկության լավագույն օրից՝ բայց ավելի լավը։",
-        title: "Մեր արհեստը",
-        p1: "Atelier Maison-ը սկսվել է 2015 թվականին որպես երկու հոգու արհեստանոց Երևանում՝ ձեռքով պատրաստելով աթոռներ հայկական ընկույզից։",
-        p2: "Տասը տարի անց մենք նախագծում ենք յուրաքանչյուր իր մեզ մոտ, ինքներս ենք մշակում մասիվը և ձեռքով հղկում ամեն շրջանակ։",
-        p3: "Ոչ արագ կահույք։ Միայն մտածված, ամուր և հանգիստ գեղեցիկ իրեր՝ ողջ կյանքի համար։",
-      },
-      auth: {
-        loginTitle: "Բարի վերադարձ", loginSub: "Մուտք գործեք պատվերները հետևելու համար։",
-        registerTitle: "Միացեք մեզ", registerSub: "Ստեղծեք հաշիվ՝ արագ պատվերի և բոնուսների համար։",
-        registerTitle: "Ստեղծել հաշիվ", registerSub: "Արագ վճարում, պատվերի հետևում և թրեյդ-գներ։",
-        email: "Էլ. փոստ", password: "Գաղտնաբառ", name: "Անուն Ազգանուն", confirm: "Հաստատել գաղտնաբառը",
-        signIn: "Մուտք", createAccount: "Ստեղծել հաշիվ",
-        noAccount: "Հաշիվ չունե՞ք։", haveAccount: "Արդեն մե՞ր հետ եք։",
-      },
-      footer: {
-        tag: "Սիրով տրորված 2015-ից։",
-        tag: "Ստեղծում ենք Երևանում 2015-ից։",
-        rights: "Բոլոր իրավունքները պաշտպանված են։",
-        explore: "Բաժիններ", follow: "Հետևեք մեզ", visit: "Հասցե",
-        explore: "Խանութ", follow: "Հետևեք մեզ", visit: "Սրահ",
-      },
-      admin: {
-        title: "Ադմին վահանակ",
-  },
-};
-// IMPORTANT: always init with "en" to match SSR. The saved language is applied
-// on the client after mount via <LanguageSync /> to avoid hydration mismatches.
-if (!i18n.isInitialized) {
-  i18n.use(initReactI18next).init({
-    resources,
-    lng: typeof window !== "undefined" ? localStorage.getItem("lang") || "en" : "en",
-    lng: "en",
-    fallbackLng: "en",
-    interpolation: { escapeValue: false },
-    returnObjects: true,
-src/components/LanguageSync.tsx
-import { useEffect } from "react";
-import { useTranslation } from "react-i18next";
-/**
- * Client-only effect that syncs the saved language from localStorage into i18next
- * after hydration. Keeps SSR output deterministic ("en") to avoid hydration
- * mismatches when the user has a non-English preference saved.
- */
-export function LanguageSync() {
-  const { i18n } = useTranslation();
-  useEffect(() => {
-    const saved = localStorage.getItem("lang");
-    if (saved && saved !== i18n.language) {
-      i18n.changeLanguage(saved);
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .fade-in { animation: fadeIn 1s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
     }
-  }, [i18n]);
-  return null;
-}
-src/styles.css
-  --color-charcoal: var(--charcoal);
-  --color-ember: var(--ember);
-  --color-cheese: var(--cheese);
-  --font-display: "Bebas Neue", "Impact", sans-serif;
-  --font-display: "Fraunces", "Cormorant Garamond", Georgia, serif;
-  --font-body: "Inter", system-ui, sans-serif;
-}
-:root {
-  --radius: 0.5rem;
-  /* Cream / warm light theme */
-  --background: oklch(0.97 0.015 75);
-  --foreground: oklch(0.18 0.025 40);
-  --card: oklch(0.99 0.01 80);
-  --card-foreground: oklch(0.18 0.025 40);
-  --popover: oklch(0.99 0.01 80);
-  --popover-foreground: oklch(0.18 0.025 40);
-  --primary: oklch(0.62 0.21 35); /* ember orange */
-  --primary-foreground: oklch(0.98 0.01 80);
-  --secondary: oklch(0.92 0.03 70);
-  --secondary-foreground: oklch(0.22 0.03 40);
-  --muted: oklch(0.93 0.02 70);
-  --muted-foreground: oklch(0.45 0.03 50);
-  --accent: oklch(0.78 0.17 80); /* cheese yellow */
-  --accent-foreground: oklch(0.18 0.03 40);
-  --destructive: oklch(0.55 0.24 27);
-  --radius: 0.75rem;
-  /* Warm linen light theme — walnut + sage */
-  --background: oklch(0.97 0.01 80);
-  --foreground: oklch(0.22 0.02 50);
-  --card: oklch(0.99 0.008 85);
-  --card-foreground: oklch(0.22 0.02 50);
-  --popover: oklch(0.99 0.008 85);
-  --popover-foreground: oklch(0.22 0.02 50);
-  --primary: oklch(0.42 0.07 55); /* walnut */
-  --primary-foreground: oklch(0.98 0.01 85);
-  --secondary: oklch(0.92 0.02 80);
-  --secondary-foreground: oklch(0.25 0.02 50);
-  --muted: oklch(0.94 0.015 85);
-  --muted-foreground: oklch(0.48 0.02 60);
-  --accent: oklch(0.72 0.07 145); /* sage */
-  --accent-foreground: oklch(0.18 0.03 50);
-  --destructive: oklch(0.55 0.2 27);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.88 0.02 70);
-  --input: oklch(0.88 0.02 70);
-  --ring: oklch(0.62 0.21 35);
-  --border: oklch(0.88 0.015 80);
-  --input: oklch(0.88 0.015 80);
-  --ring: oklch(0.42 0.07 55);
-  --charcoal: oklch(0.18 0.02 40);
-  --ember: oklch(0.62 0.21 35);
-  --cheese: oklch(0.82 0.17 85);
-  --charcoal: oklch(0.22 0.02 50);
-  --ember: oklch(0.55 0.1 50); /* terracotta */
-  --cheese: oklch(0.82 0.06 90); /* warm sand */
-  --gradient-hero: linear-gradient(135deg, oklch(0.18 0.02 40) 0%, oklch(0.28 0.08 35) 100%);
-  --gradient-ember: linear-gradient(135deg, oklch(0.65 0.22 40) 0%, oklch(0.55 0.2 25) 100%);
-  --shadow-glow: 0 20px 60px -15px oklch(0.62 0.21 35 / 0.5);
-  --shadow-card: 0 10px 30px -10px oklch(0.18 0.02 40 / 0.25);
-  --gradient-hero: linear-gradient(135deg, oklch(0.96 0.015 85) 0%, oklch(0.9 0.025 80) 100%);
-  --gradient-ember: linear-gradient(135deg, oklch(0.48 0.08 55) 0%, oklch(0.35 0.05 50) 100%);
-  --shadow-glow: 0 20px 60px -15px oklch(0.42 0.07 55 / 0.35);
-  --shadow-card: 0 10px 30px -10px oklch(0.22 0.02 50 / 0.18);
-}
-.dark {
-  --background: oklch(0.13 0.015 40);
-  --foreground: oklch(0.96 0.015 75);
-  --card: oklch(0.18 0.02 40);
-  --card-foreground: oklch(0.96 0.015 75);
-  --popover: oklch(0.18 0.02 40);
-  --popover-foreground: oklch(0.96 0.015 75);
-  --primary: oklch(0.7 0.21 40);
-  --primary-foreground: oklch(0.13 0.015 40);
-  --secondary: oklch(0.23 0.025 40);
-  --secondary-foreground: oklch(0.96 0.015 75);
-  --muted: oklch(0.22 0.02 40);
-  --muted-foreground: oklch(0.68 0.02 60);
-  --accent: oklch(0.78 0.17 80);
-  --accent-foreground: oklch(0.13 0.015 40);
-  --destructive: oklch(0.65 0.24 27);
-  --background: oklch(0.16 0.012 50);
-  --foreground: oklch(0.95 0.01 85);
-  --card: oklch(0.21 0.015 50);
-  --card-foreground: oklch(0.95 0.01 85);
-  --popover: oklch(0.21 0.015 50);
-  --popover-foreground: oklch(0.95 0.01 85);
-  --primary: oklch(0.78 0.06 80); /* warm light wood */
-  --primary-foreground: oklch(0.16 0.012 50);
-  --secondary: oklch(0.25 0.018 50);
-  --secondary-foreground: oklch(0.95 0.01 85);
-  --muted: oklch(0.24 0.015 50);
-  --muted-foreground: oklch(0.7 0.015 70);
-  --accent: oklch(0.72 0.07 145);
-  --accent-foreground: oklch(0.16 0.012 50);
-  --destructive: oklch(0.65 0.22 27);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.28 0.02 40);
-  --input: oklch(0.28 0.02 40);
-  --ring: oklch(0.7 0.21 40);
-  --gradient-hero: linear-gradient(135deg, oklch(0.1 0.015 40) 0%, oklch(0.18 0.06 35) 100%);
-  --shadow-glow: 0 20px 60px -15px oklch(0.7 0.21 40 / 0.6);
-  --border: oklch(0.3 0.018 50);
-  --input: oklch(0.3 0.018 50);
-  --ring: oklch(0.78 0.06 80);
-  --gradient-hero: linear-gradient(135deg, oklch(0.14 0.012 50) 0%, oklch(0.22 0.02 55) 100%);
-  --gradient-ember: linear-gradient(135deg, oklch(0.4 0.06 55) 0%, oklch(0.28 0.04 50) 100%);
-  --shadow-glow: 0 20px 60px -15px oklch(0.78 0.06 80 / 0.35);
-}
-@layer base {
-  }
-  h1, h2, h3, h4 {
-    font-family: var(--font-display);
-    letter-spacing: 0.01em;
-    letter-spacing: -0.01em;
-    font-weight: 400;
-  }
-}
-src/components/Hero.tsx
-import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
-import { ArrowRight, Star } from "lucide-react";
-import heroBurger from "@/assets/hero-burger.jpg";
-import heroImg from "@/assets/hero-burger.jpg";
-export function Hero() {
-  const { t } = useTranslation();
-  return (
-    <section className="relative overflow-hidden bg-gradient-hero text-background dark:text-foreground">
-      <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_70%_30%,oklch(0.62_0.21_35/0.6),transparent_60%)]" />
-    <section className="relative overflow-hidden bg-gradient-hero">
-      <div className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_80%_20%,oklch(0.72_0.07_145/0.25),transparent_60%)]" />
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 py-20 md:py-28 grid lg:grid-cols-2 gap-12 items-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="space-y-7"
-        >
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/20 px-3 py-1 text-xs font-medium uppercase tracking-widest">
-          <span className="inline-flex items-center gap-2 rounded-full border border-foreground/15 px-3 py-1 text-xs font-medium uppercase tracking-widest">
-            <Star className="h-3 w-3 fill-accent text-accent" /> {t("hero.tag")}
-          </span>
-          <h1 className="font-display text-6xl md:text-7xl lg:text-8xl leading-[0.95] text-balance whitespace-pre-line">
-          <h1 className="font-display text-6xl md:text-7xl lg:text-8xl leading-[0.95] text-balance whitespace-pre-line italic">
-            {t("hero.title")}
-          </h1>
-          <p className="max-w-md text-base md:text-lg opacity-80 text-balance">{t("hero.sub")}</p>
-          <p className="max-w-md text-base md:text-lg text-foreground/75 text-balance">{t("hero.sub")}</p>
-          <div className="flex flex-wrap gap-3">
-            <a href="#menu" className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground shadow-glow hover:translate-y-[-2px] transition-transform">
-            <a href="#menu" className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow hover:translate-y-[-2px] transition-transform">
-              {t("hero.cta1")} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
-            <a href="#menu" className="inline-flex items-center rounded-full border border-white/30 px-6 py-3.5 text-sm font-semibold hover:bg-white/10 transition-colors">
-            <a href="#gallery" className="inline-flex items-center rounded-full border border-foreground/25 px-6 py-3.5 text-sm font-semibold hover:bg-foreground/5 transition-colors">
-              {t("hero.cta2")}
-            </a>
-          </div>
-          <div className="flex items-center gap-6 pt-4">
-            <div>
-              <div className="font-display text-3xl text-accent">4.9★</div>
-              <div className="text-xs opacity-70 uppercase tracking-wider">2,400+ reviews</div>
-              <div className="font-display text-3xl text-primary italic">4.9★</div>
-              <div className="text-xs text-muted-foreground uppercase tracking-wider">2,400+ reviews</div>
-            </div>
-            <div className="h-10 w-px bg-white/20" />
-            <div className="h-10 w-px bg-foreground/15" />
-            <div>
-              <div className="font-display text-3xl text-accent">10y</div>
-              <div className="text-xs opacity-70 uppercase tracking-wider">smashing patties</div>
-              <div className="font-display text-3xl text-primary italic">10y</div>
-              <div className="text-xs text-muted-foreground uppercase tracking-wider">crafted in Yerevan</div>
-            </div>
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9, rotate: -8 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
-          className="relative"
-        >
-          <div className="absolute -inset-10 rounded-full bg-primary/40 blur-3xl" />
-          <div className="absolute -inset-6 rounded-[2rem] bg-accent/20 blur-3xl" />
-          <motion.img
-            src={heroBurger}
-            alt="Signature burger"
-            src={heroImg}
-            alt="Living room with curved bouclé sofa"
-            width={1600}
-            height={1600}
-            className="relative w-full max-w-lg mx-auto drop-shadow-2xl"
-            animate={{ y: [0, -12, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            height={900}
-            className="relative w-full rounded-[2rem] shadow-card object-cover aspect-[4/3]"
-            animate={{ y: [0, -8, 0] }}
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-          />
-        </motion.div>
-      </div>
-src/components/MenuSection.tsx
-import { motion } from "framer-motion";
-import { Search, Plus } from "lucide-react";
-import classic from "@/assets/menu-classic.jpg";
-import spicy from "@/assets/menu-spicy.jpg";
-import bbq from "@/assets/menu-bbq.jpg";
-import veggie from "@/assets/menu-veggie.jpg";
-import chair from "@/assets/menu-spicy.jpg";
-import table from "@/assets/menu-bbq.jpg";
-import bed from "@/assets/menu-veggie.jpg";
-import hero from "@/assets/hero-burger.jpg";
-const items = [
-  { key: "classic", img: hero, tag: "classic" },
-  { key: "double", img: classic, tag: "classic" },
-  { key: "spicy", img: spicy, tag: "spicy" },
-  { key: "bbq", img: bbq, tag: "classic" },
-  { key: "veggie", img: veggie, tag: "veggie" },
-  { key: "truffle", img: hero, tag: "classic" },
-  { key: "classic", img: classic, tag: "classic" },
-  { key: "double", img: hero, tag: "classic" },
-  { key: "spicy", img: chair, tag: "spicy" },
-  { key: "bbq", img: table, tag: "veggie" },
-  { key: "veggie", img: bed, tag: "veggie" },
-  { key: "truffle", img: table, tag: "veggie" },
-] as const;
-type Item = (typeof items)[number];
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
-          <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-primary">— {t("menu.sub")}</span>
-            <h2 className="font-display text-5xl md:text-6xl mt-2">{t("menu.title")}</h2>
-            <span className="text-xs font-bold uppercase tracking-widest text-accent-foreground/80">— {t("menu.sub")}</span>
-            <h2 className="font-display italic text-5xl md:text-6xl mt-2">{t("menu.title")}</h2>
-          </div>
-          <div className="relative w-full md:w-72">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                whileHover={{ y: -6 }}
-                className="group relative overflow-hidden rounded-3xl bg-card border border-border shadow-card"
-              >
-                <div className="aspect-[4/3] overflow-hidden">
-                <div className="aspect-[4/3] overflow-hidden bg-muted">
-                  <img
-                    src={item.img}
-                    alt={data.name}
-                    loading="lazy"
-                    width={1024}
-                    height={768}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-start justify-between gap-3">
-                    <h3 className="font-display text-2xl">{data.name}</h3>
-                    <span className="font-display text-2xl text-primary">${data.price.toFixed(2)}</span>
-                    <h3 className="font-display italic text-2xl">{data.name}</h3>
-                    <span className="font-display text-2xl text-primary">${data.price.toLocaleString()}</span>
-                  </div>
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{data.desc}</p>
-                  <button className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-primary hover:gap-3 transition-all">
-                  <button className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all">
-                    <Plus className="h-4 w-4" /> {t("menu.order")}
-                  </button>
-                </div>
-src/components/Navbar.tsx
-import { Link, useRouterState } from "@tanstack/react-router";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
-import { Moon, Sun, Menu as MenuIcon, X, Flame } from "lucide-react";
-import { Moon, Sun, Menu as MenuIcon, X, Armchair } from "lucide-react";
-import { useTheme } from "./ThemeProvider";
-const LANGS = [
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
-        <Link to="/" className="flex items-center gap-2 group">
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-gradient-ember text-primary-foreground shadow-glow transition-transform group-hover:rotate-12">
-            <Flame className="h-5 w-5" />
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-gradient-ember text-primary-foreground shadow-glow transition-transform group-hover:rotate-6">
-            <Armchair className="h-5 w-5" />
-          </span>
-          <span className="font-display text-2xl tracking-wide">Burgers Home</span>
-          <span className="font-display italic text-2xl tracking-tight">Atelier Maison</span>
-        </Link>
-        <nav className="hidden lg:flex items-center gap-7 text-sm font-medium">
-src/components/Footer.tsx
-import { Flame, Instagram, Facebook, Twitter, Youtube } from "lucide-react";
-import { Armchair, Instagram, Facebook, Twitter, Youtube } from "lucide-react";
-import { useTranslation } from "react-i18next";
-export function Footer() {
-        <div className="md:col-span-2">
-          <div className="flex items-center gap-2">
-            <span className="grid h-10 w-10 place-items-center rounded-full bg-gradient-ember shadow-glow">
-              <Flame className="h-5 w-5 text-primary-foreground" />
-              <Armchair className="h-5 w-5 text-primary-foreground" />
-            </span>
-            <span className="font-display text-3xl">Burgers Home</span>
-            <span className="font-display italic text-3xl">Atelier Maison</span>
-          </div>
-          <p className="mt-4 max-w-sm text-sm opacity-70">{t("footer.tag")}</p>
-          <div className="mt-6 flex gap-3">
-            {[Instagram, Facebook, Twitter, Youtube].map((Icon, i) => (
-              <a key={i} href="#" className="grid h-10 w-10 place-items-center rounded-full border border-white/15 hover:bg-primary hover:border-primary transition-colors">
-              <a key={i} href="#" aria-label="social" className="grid h-10 w-10 place-items-center rounded-full border border-white/15 hover:bg-primary hover:border-primary transition-colors">
-                <Icon className="h-4 w-4" />
-              </a>
-            ))}
-          </div>
-        </div>
-        <div>
-          <h4 className="font-display text-lg mb-4">{t("footer.explore")}</h4>
-          <h4 className="font-display italic text-xl mb-4">{t("footer.explore")}</h4>
-          <ul className="space-y-2 text-sm opacity-80">
-            <li><a href="/#menu" className="hover:text-primary">{t("nav.menu")}</a></li>
-            <li><a href="/#gallery" className="hover:text-primary">{t("nav.gallery")}</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-display text-lg mb-4">{t("footer.visit")}</h4>
-          <h4 className="font-display italic text-xl mb-4">{t("footer.visit")}</h4>
-          <p className="text-sm opacity-80">{t("contact.address")}</p>
-          <p className="text-sm opacity-80 mt-1">{t("contact.phone")}</p>
-          <p className="text-sm opacity-80 mt-1">{t("contact.sub")}</p>
-        </div>
-      </div>
-      <div className="border-t border-white/10 py-5 text-center text-xs opacity-60">
-        © {new Date().getFullYear()} Burgers Home. {t("footer.rights")}
-        © {new Date().getFullYear()} Atelier Maison. {t("footer.rights")}
-      </div>
-    </footer>
-  );
-src/routes/about.tsx
-import { createFileRoute } from "@tanstack/react-router";
-import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
-import kitchen from "@/assets/about-kitchen.jpg";
-import workshop from "@/assets/about-kitchen.jpg";
-export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About — Burgers Home" },
-      { name: "description", content: "Our story: one cook, one cast-iron skillet, and a stubborn belief in great burgers." },
-      { title: "About — Atelier Maison" },
-      { name: "description", content: "Designed and built in Yerevan since 2015. Hand-milled hardwood, natural fabrics, and pieces meant to last." },
-      { property: "og:title", content: "About — Atelier Maison" },
-      { property: "og:description", content: "A two-person workshop that grew into a studio. Our craft, our materials, our story." },
-    ],
-  }),
-  component: About,
-      <div className="mx-auto max-w-5xl px-4 sm:px-6">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <span className="text-xs font-bold uppercase tracking-widest text-primary">— Est. 2015</span>
-          <h1 className="font-display text-6xl md:text-7xl mt-2 mb-10">{t("about.title")}</h1>
-          <h1 className="font-display italic text-6xl md:text-7xl mt-2 mb-10">{t("about.title")}</h1>
-        </motion.div>
-        <motion.img
-          initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          src={kitchen} alt="Our kitchen" loading="lazy" width={1600} height={1024}
-          src={workshop} alt="Our workshop" loading="lazy" width={1600} height={1024}
-          className="w-full rounded-3xl shadow-card mb-12"
-        />
-        <div className="grid md:grid-cols-3 gap-8 text-base leading-relaxed text-foreground/85">
-src/routes/admin.tsx
-import { motion } from "framer-motion";
-export const Route = createFileRoute("/admin")({
-  head: () => ({ meta: [{ title: "Admin — Burgers Home" }] }),
-  head: () => ({ meta: [{ title: "Admin — Atelier Maison" }] }),
-  component: Admin,
-});
-const orders = [
-  { id: "#1024", item: "Inferno × 2", total: 23.0, status: "Cooking" },
-  { id: "#1023", item: "Classic, Fries", total: 13.5, status: "Delivered" },
-  { id: "#1022", item: "Truffle Royale", total: 16.0, status: "Out for delivery" },
-  { id: "#1021", item: "Double Trouble × 3", total: 39.0, status: "Delivered" },
-  { id: "#1020", item: "Green Machine", total: 10.0, status: "Cancelled" },
-  { id: "#1024", item: "Linden Curve Sofa", total: 2490, status: "Building" },
-  { id: "#1023", item: "Halden Settee × 2", total: 3380, status: "Delivered" },
-  { id: "#1022", item: "Atlas Lounge + Ottoman", total: 1890, status: "Out for delivery" },
-  { id: "#1021", item: "Roma Pedestal Table", total: 2890, status: "Delivered" },
-  { id: "#1020", item: "Aria Marble Table", total: 1390, status: "Cancelled" },
-];
-const stats = [
-  { key: "orders", value: "128", icon: ShoppingBag, change: "+12%" },
-  { key: "revenue", value: "$3,420", icon: DollarSign, change: "+8%" },
-  { key: "orders", value: "42", icon: ShoppingBag, change: "+12%" },
-  { key: "revenue", value: "$98,420", icon: DollarSign, change: "+8%" },
-  { key: "customers", value: "94", icon: Users, change: "+5%" },
-  { key: "rating", value: "4.9", icon: Star, change: "+0.1" },
-];
-  return (
-    <section className="py-12 md:py-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="flex items-center justify-between mb-10">
-          <h1 className="font-display text-5xl">{t("admin.title")}</h1>
-          <button className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground shadow-glow">
-        <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 mb-10 sm:flex sm:justify-between">
-          <h1 className="font-display italic text-4xl sm:text-5xl truncate">{t("admin.title")}</h1>
-          <button className="shrink-0 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-glow">
-            <CreditCard className="h-4 w-4" /> Payouts
-          </button>
-        </div>
-        <div className="grid lg:grid-cols-3 gap-6">
-          <div className="lg:col-span-2 rounded-3xl bg-card border border-border shadow-card overflow-hidden">
-            <div className="p-6 border-b border-border">
-              <h2 className="font-display text-2xl">{t("admin.recent")}</h2>
-              <h2 className="font-display italic text-2xl">{t("admin.recent")}</h2>
-            </div>
-            <table className="w-full text-sm">
-              <thead className="bg-muted/50 text-xs uppercase tracking-wider text-muted-foreground">
-                <tr>
-                  <th className="px-6 py-3 text-left">#</th>
-                  <th className="px-6 py-3 text-left">{t("admin.item")}</th>
-                  <th className="px-6 py-3 text-right">{t("admin.total")}</th>
-                  <th className="px-6 py-3 text-right">{t("admin.status")}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {orders.map((o) => (
-                  <tr key={o.id} className="border-t border-border hover:bg-muted/30 transition-colors">
-                    <td className="px-6 py-4 font-semibold">{o.id}</td>
-                    <td className="px-6 py-4">{o.item}</td>
-                    <td className="px-6 py-4 text-right font-semibold">${o.total.toFixed(2)}</td>
-                    <td className="px-6 py-4 text-right">
-                      <span className={`inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold ${
-                        o.status === "Delivered" ? "bg-accent/30 text-accent-foreground" :
-                        o.status === "Cancelled" ? "bg-destructive/20 text-destructive" :
-                        "bg-primary/20 text-primary"
-                      }`}>{o.status}</span>
-                    </td>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead className="bg-muted/50 text-xs uppercase tracking-wider text-muted-foreground">
-                  <tr>
-                    <th className="px-6 py-3 text-left">#</th>
-                    <th className="px-6 py-3 text-left">{t("admin.item")}</th>
-                    <th className="px-6 py-3 text-right">{t("admin.total")}</th>
-                    <th className="px-6 py-3 text-right">{t("admin.status")}</th>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-                </thead>
-                <tbody>
-                  {orders.map((o) => (
-                    <tr key={o.id} className="border-t border-border hover:bg-muted/30 transition-colors">
-                      <td className="px-6 py-4 font-semibold">{o.id}</td>
-                      <td className="px-6 py-4">{o.item}</td>
-                      <td className="px-6 py-4 text-right font-semibold">${o.total.toLocaleString()}</td>
-                      <td className="px-6 py-4 text-right">
-                        <span className={`inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold ${
-                          o.status === "Delivered" ? "bg-accent/30 text-accent-foreground" :
-                          o.status === "Cancelled" ? "bg-destructive/20 text-destructive" :
-                          "bg-primary/15 text-primary"
-                        }`}>{o.status}</span>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div className="p-6 rounded-3xl bg-gradient-ember text-primary-foreground shadow-glow">
-            <h2 className="font-display text-2xl mb-2">Payment integration</h2>
-            <p className="text-sm opacity-90 mb-6">Stripe & Apple Pay ready. Process refunds in one click.</p>
-            <h2 className="font-display italic text-2xl mb-2">Payment integration</h2>
-            <p className="text-sm opacity-90 mb-6">Stripe, Apple Pay, and Klarna financing for orders over $1,000.</p>
-            <div className="space-y-3">
-              {[{ k: "Stripe", v: "Connected" }, { k: "Apple Pay", v: "Connected" }, { k: "PayPal", v: "Connect" }].map((p) => (
-              {[{ k: "Stripe", v: "Connected" }, { k: "Apple Pay", v: "Connected" }, { k: "Klarna", v: "Connect" }].map((p) => (
-                <div key={p.k} className="flex items-center justify-between rounded-xl bg-white/15 backdrop-blur p-3">
-                  <span className="font-semibold">{p.k}</span>
-                  <span className="text-xs font-bold">{p.v}</span>
-src/routes/__root.tsx
-import { ThemeProvider } from "../components/ThemeProvider";
-import { Navbar } from "../components/Navbar";
-import { Footer } from "../components/Footer";
-import { LanguageSync } from "../components/LanguageSync";
-function NotFoundComponent() {
-  return (
-src/routes/__root.tsx
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Burgers Home — Smashed. Stacked. Served." },
-      { name: "description", content: "Hand-pressed burgers, fresh-baked buns, sauces from scratch. Yerevan's best burger joint since 2015." },
-      { property: "og:title", content: "Burgers Home" },
-      { property: "og:description", content: "Smashed patties, fresh buns, scratch sauces." },
-      { title: "Atelier Maison — Furniture for slow living" },
-      { name: "description", content: "Hand-finished hardwood, natural fabrics, and quietly beautiful furniture built to last a generation. Designed in Yerevan since 2015." },
-      { property: "og:title", content: "Atelier Maison" },
-      { property: "og:description", content: "Hand-finished hardwood. Natural fabrics. Furniture built to last." },
-      { property: "og:type", content: "website" },
-    ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" },
-    ],
-  }),
-  shellComponent: RootShell,
-src/routes/__root.tsx
-  return (
-    <QueryClientProvider client={queryClient}>
-      <ThemeProvider>
-        <LanguageSync />
-        <div className="flex min-h-screen flex-col">
-          <Navbar />
-          <main className="flex-1">
-src/routes/index.tsx
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Burgers Home — Smashed. Stacked. Served." },
-      { name: "description", content: "Hand-pressed burgers, fresh-baked buns, scratch sauces. Yerevan's favorite burger joint." },
-      { title: "Atelier Maison — Furniture for slow living" },
-      { name: "description", content: "Hand-finished hardwood, natural fabrics, and quietly beautiful furniture built to last a generation." },
-    ],
-  }),
-  component: Index,
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-outline-variant/30">
+<nav class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-xs cursor-pointer active:opacity-70 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chair</span>
+<span class="font-headline-sm text-headline-sm tracking-tight italic">Atelier Maison</span>
+</div>
+<button class="text-primary cursor-pointer active:opacity-70 p-1" id="menu-trigger">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<!-- Mobile Drawer (Hidden by default) -->
+<div class="fixed inset-0 z-[60] pointer-events-none overflow-hidden" id="mobile-drawer">
+<div class="absolute inset-0 bg-on-background/20 opacity-0 transition-opacity duration-300" id="drawer-overlay"></div>
+<div class="absolute right-0 top-0 h-full w-80 bg-surface translate-x-full transition-transform duration-300 shadow-xl shadow-tertiary/5 p-md flex flex-col gap-base" id="drawer-content">
+<div class="flex justify-between items-center mb-lg">
+<span class="font-headline-md text-headline-md text-primary italic">Atelier Maison</span>
+<button class="p-2" id="close-drawer"><span class="material-symbols-outlined">close</span></button>
+</div>
+<div class="flex flex-col gap-sm">
+<a class="bg-secondary-container text-on-secondary-container font-semibold rounded-full p-4 flex items-center gap-md" href="#">
+<span class="material-symbols-outlined">auto_awesome_motion</span> Catalog
+                </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high rounded-full p-4 flex items-center gap-md transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">draw</span> Our Craft
+                </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high rounded-full p-4 flex items-center gap-md transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">rate_review</span> Reviews
+                </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high rounded-full p-4 flex items-center gap-md transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">mail</span> Contact
+                </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high rounded-full p-4 flex items-center gap-md transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">storefront</span> Showrooms
+                </a>
+</div>
+</div>
+</div>
+<main>
+<!-- Hero Section -->
+<section class="px-gutter pt-lg pb-xl max-w-container-max mx-auto overflow-hidden">
+<div class="fade-in space-y-md">
+<div class="flex items-center gap-2">
+<span class="bg-secondary-container text-on-secondary-container font-label-caps text-label-caps px-3 py-1 rounded-full uppercase">Crafted. Curated. Delivered.</span>
+</div>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-primary">
+                    Furniture made <br/><span class="italic font-normal">for slow living.</span>
+</h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-md">
+                    Hand-finished hardwood, natural fabrics, and quietly beautiful pieces built to last a generation.
+                </p>
+<div class="flex flex-col sm:flex-row gap-sm pt-sm">
+<button class="bg-primary text-on-primary font-medium px-8 py-4 rounded-md shadow-sm active:scale-95 transition-transform">
+                        Shop the catalog
+                    </button>
+<button class="border border-primary text-primary font-medium px-8 py-4 rounded-md hover:bg-primary/5 active:scale-95 transition-transform">
+                        Visit a showroom
+                    </button>
+</div>
+<div class="flex items-center gap-lg pt-lg text-on-surface-variant">
+<div class="flex flex-col">
+<span class="font-bold text-primary">4.9★</span>
+<span class="text-xs uppercase tracking-widest opacity-70">2,400+ reviews</span>
+</div>
+<div class="h-8 w-px bg-outline-variant/30"></div>
+<div class="flex flex-col">
+<span class="font-bold text-primary">10y</span>
+<span class="text-xs uppercase tracking-widest opacity-70">Crafted in Yerevan</span>
+</div>
+</div>
+</div>
+<!-- Hero Image Carousel Hint -->
+<div class="mt-xl relative aspect-[4/5] rounded-xl overflow-hidden shadow-xl shadow-tertiary/5">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A sun-drenched, minimalist living room featuring a handcrafted walnut coffee table and a soft linen sofa. The aesthetic is high-end and calm with organic textures, warm wood tones, and natural light streaming through large windows. The overall mood is peaceful, embodying the slow-living philosophy with soft shadows and premium materials." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA34vx3a40BRAZOigGDijOUruTa1pi3dAY1iEugaqBR_4eQU-rUu5K8vQEtf4UXf3a7EVvO2lKTx-xxOPHp2m7yYTSkwYJhFa4b79r2AUxMFVIXZ7WiI1s1IWy4Etx0RoGgg55Rf27wEf0x6Jnyhqbvj5BMptbh_k8Z6ehpG1cg0Hsbtyx0MjNwzsNArIP_OE5u65oUFwdtU4Qt0pSd74xBWoVzeIp_alQmIbF9JCCo4vBuM0jIMX78k6pQa0-E18-EGzasUeoU47U')"></div>
+<div class="absolute bottom-md left-md right-md bg-white/20 backdrop-blur-md p-md rounded-lg border border-white/30 text-white">
+<p class="font-headline-sm text-headline-sm">Linden Curve Sofa</p>
+<p class="text-sm opacity-90">Our signature bouclé piece</p>
+</div>
+</div>
+</section>
+<!-- Catalog Section -->
+<section class="bg-surface-container py-xl">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="text-center mb-lg">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">The Catalog</h2>
+<p class="text-on-surface-variant font-body-md text-body-md">Six signatures. Studio-built, ready to ship.</p>
+</div>
+<!-- Tabs -->
+<div class="flex gap-sm overflow-x-auto hide-scrollbar pb-md mb-md">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full whitespace-nowrap text-sm font-medium">All</button>
+<button class="bg-white border border-outline-variant/50 text-on-surface-variant px-6 py-2 rounded-full whitespace-nowrap text-sm font-medium">Sofas</button>
+<button class="bg-white border border-outline-variant/50 text-on-surface-variant px-6 py-2 rounded-full whitespace-nowrap text-sm font-medium">Chairs</button>
+<button class="bg-white border border-outline-variant/50 text-on-surface-variant px-6 py-2 rounded-full whitespace-nowrap text-sm font-medium">Tables &amp; Beds</button>
+</div>
+<!-- Product Grid (Bento Style) -->
+<div class="grid grid-cols-1 gap-md">
+<!-- Item 1 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+<div class="aspect-square relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close-up shot of a Linden Curve Sofa upholstered in premium cream bouclé fabric with visible walnut wood feet. The lighting is soft and cinematic, highlighting the tactile texture of the fabric. The background is a warm, minimalist interior with earthy tones, fitting the Atelier Maison warm minimalism aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg4EyWGMOv5e6VVtntml9RCv-EDKywH3O4HUJjFsGbOCi2eE2ibwB8-9v6WOsjVFY7x0CWtkQV3CS-OmCOjmUHnzuwscgNlbrLPfGs5p3C9OulzPHMlZrFANigknX7QRYTVpKTiVE0-RZ7ronbu0bBPRwq4vcU-EH2MvaChxzFxE5e7xFKWBQUFPZR7T9_xC1qE8i96LbZdXkG-ekcadV5wK0_TxUqW2a71iCLWgj-YM0zqWdQswRnNYQrXyQ1E3fruRnTQZinDFs"/>
+<span class="absolute top-sm right-sm bg-secondary-container/90 text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Bestseller</span>
+</div>
+<div class="p-md text-center">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Linden Curve Sofa</h3>
+<p class="text-on-surface-variant text-sm mb-2">Bouclé, walnut feet</p>
+<p class="font-bold text-primary">$2,490</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm">
+<div class="aspect-square">
+<img class="w-full h-full object-cover" data-alt="Elegant Halden Settee upholstered in natural linen, positioned in a quiet corner of a bright, minimalist room. The setting includes a single tall ceramic vase and a soft shadow cast on a textured wall. The visual style is editorial and serene, focusing on the simple, clean lines of the furniture piece." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1Bknj70q7rjf8k2zolx0HTfo-uviAdl_xo3eexyRY1aaX5u6rh-6r6l6q7zcK-MlRB1FGQ-nw8DfU4dqVUkd3mjU_PG6s0WRLfxjgYS17YKzAGMbpuYXGi82UVM1W1jn0lld7nwZ0P1lfnxesAsFIpmUNSBNVCqf9ymVFnqfmyKHKxx9s1GnOKPiDOXO7s46SuxFVcaKEXdweBmKhS6HJwUEawX3BZZMfiXsRYmRpLfLiRoevCKx8Jpjt8zYFAACQs6S4akcE8v0"/>
+</div>
+<div class="p-md text-center">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Halden Settee</h3>
+<p class="text-on-surface-variant text-sm mb-2">Natural linen</p>
+<p class="font-bold text-primary">$1,690</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm">
+<div class="aspect-square">
+<img class="w-full h-full object-cover" data-alt="A luxurious Atlas Lounge Chair featuring rich tan leather upholstery and a solid walnut wood frame. The chair is placed on a light oak wooden floor next to a low bookshelf. The lighting is moody and warm, creating high-end depth and highlighting the premium grain of the leather and wood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc_JZpQ2nQBb1aR2BnGAZsNljX2OvMHut4gO9v0Ca5SfOL13BiBSS8eu8iCh2ycQQsx6rSLmei5K30MrEdMg-m4bZRUBPnY1C-soUaNQMNTTQOHjd-mfCEqnVRTj4x06NQ_ie3sJ-JCFs9Qfk9VwCXSQ_Mi1eym4_hPFhH7-CiZHlZBogK0dIpwlKMFxc3SH6zuG9h6nfcpe0b19opRSZd0eYzIRreblz49cxAdwqTl5P09f8hv3RYa2zgz6DuIbMAlLh0NIHkalc"/>
+</div>
+<div class="p-md text-center">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Atlas Lounge Chair</h3>
+<p class="text-on-surface-variant text-sm mb-2">Tan leather, walnut</p>
+<p class="font-bold text-primary">$1,890</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm">
+<div class="aspect-square">
+<img class="w-full h-full object-cover" data-alt="A solid walnut Roma Pedestal Table standing centrally in a spacious, modern dining area. The table has a sculptural base and a smooth, circular top showcasing beautiful wood grain patterns. The atmosphere is sophisticated and archival, with a focus on the artisanal craftsmanship and natural materiality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh8hZ5binPDULZorzHW_J-SJ2KI0sTbKIMpzV3mcVZyHiB49q3yzZs-3kXze-E99gdcCJzpoi_dRuSUdqbWp2Ap-cZ1LyNGTSP3KkpSaXEsoIqJbCEwp57d0MrMjN0t7PCI9O7ksMp26wzBPhl_3c8bz2eagh7OMrAwt8ko42_OmW2CwEdelTYTGI0LaaS2wXksMprz5H_epYKDx_aurg_tK_cLc1GKCTlxN0OebcZgcEEA3yjnCb2yB9C4d6xfUN0T5GLBFZ9mLg"/>
+</div>
+<div class="p-md text-center">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Roma Pedestal Table</h3>
+<p class="text-on-surface-variant text-sm mb-2">Solid walnut</p>
+<p class="font-bold text-primary">$2,890</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Craft Section -->
+<section class="py-xl px-gutter max-w-container-max mx-auto text-center">
+<h2 class="font-label-caps text-label-caps text-secondary tracking-widest uppercase mb-sm">Our craft</h2>
+<h3 class="font-display-lg-mobile text-display-lg-mobile text-primary italic mb-md">Built for a lifetime.</h3>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-2xl mx-auto mb-xl">
+                No fast furniture. No flat-pack shortcuts. Just considered, durable, quietly beautiful pieces you'll keep for life.
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md text-left">
+<div class="p-md bg-surface-container-low rounded-xl border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">carpenter</span>
+<h4 class="font-headline-sm text-headline-sm mb-2">The Ledger</h4>
+<ul class="space-y-sm text-sm">
+<li class="flex justify-between border-b border-outline-variant/20 pb-1">
+<span class="font-body-md opacity-60">FRAME</span>
+<span class="font-headline-sm text-base italic">Solid Kiln-Dried Walnut</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant/20 pb-1">
+<span class="font-body-md opacity-60">JOINERY</span>
+<span class="font-headline-sm text-base italic">Mortise and Tenon</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant/20 pb-1">
+<span class="font-body-md opacity-60">FINISH</span>
+<span class="font-headline-sm text-base italic">Hand-Rubbed Natural Oils</span>
+</li>
+</ul>
+</div>
+<div class="aspect-video rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Artisan hands carefully hand-planing a piece of dark walnut wood in a sunlit woodworking studio. Sawdust is visible in the air, captured by a beam of morning light. The scene emphasizes traditional craftsmanship, intentionality, and the high-quality tools used to create Atelier Maison furniture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxw7mc9UHKpeECJDm-gwHTeqD2W5d3Ny8-5j5zLdSV1ODJiflS9hYIXs0fniJNPNbs0Ms-HcQzNorKVjjA-LKmj7FMgaABKwDY445UUIosH9GqytckpB2FKctxDgIl-NKE_f4RDjaOUgOGugemz8bHOJ5TwwUozd8Y3BGPT98koI7uljg1pVgZHupYMGqjuA6sYecCg7Qgt38yH5s3FgANWKloqz2mtmKbtHHr40UhTWcZ8WhoqgSJNDJ4GEB-19n9fPUhA2I-tjQ"/>
+</div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="bg-primary text-on-primary py-xl">
+<div class="px-gutter max-w-container-max mx-auto overflow-hidden">
+<div class="flex gap-md overflow-x-auto hide-scrollbar snap-x snap-mandatory">
+<!-- Review 1 -->
+<div class="min-w-[85%] snap-center bg-primary-container p-lg rounded-xl flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary-fixed-dim text-4xl mb-md">format_quote</span>
+<p class="font-headline-sm text-headline-sm italic mb-lg">"The Linden sofa anchors our entire living room. The bouclé texture is stunning in person."</p>
+</div>
+<p class="font-label-caps text-label-caps tracking-widest">— MARIAM K.</p>
+</div>
+<!-- Review 2 -->
+<div class="min-w-[85%] snap-center bg-primary-container p-lg rounded-xl flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary-fixed-dim text-4xl mb-md">format_quote</span>
+<p class="font-headline-sm text-headline-sm italic mb-lg">"Walnut grain on the Roma table is unreal. You can tell it was made by someone who cares."</p>
+</div>
+<p class="font-label-caps text-label-caps tracking-widest">— DAVID A.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact/Showroom -->
+<section class="py-xl px-gutter max-w-container-max mx-auto">
+<div class="bg-surface-container-high rounded-2xl p-lg flex flex-col gap-lg items-center text-center">
+<div class="space-y-sm">
+<h2 class="font-headline-md text-headline-md text-primary italic">Come sit with us</h2>
+<p class="text-on-surface-variant font-body-md text-body-md">Experience the collection in person at our flagship studio.</p>
+</div>
+<div class="space-y-base">
+<p class="font-bold text-primary">Yerevan Studio</p>
+<p class="text-on-surface-variant">45 Tumanyan St, Kentron District</p>
+<p class="text-on-surface-variant font-medium">+374 10 555 012</p>
+</div>
+<div class="w-full aspect-[16/9] rounded-xl overflow-hidden bg-surface-variant relative">
+<img class="w-full h-full object-cover grayscale opacity-60" data-alt="A stylized map of Yerevan city center with a focal point marking the location of Atelier Maison studio. The map uses a minimalist, warm-toned design palette of creams and browns, consistent with a high-end interior brand aesthetic. Soft shadows and clean typography label the surrounding streets." data-location="Yerevan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3oOLKopFzjrSo8YHrJe3idM4qrHv64Q35MwMxGgOPfKYPIM83uePokGQ_lENRnULa9vmXPHFE4TmDcf9zdYz1UYBGKVD4nRJ3EpKWPjweSWw-VqVV7odPwDApjQMGcB269i_W4nJULfDmckw-AQs_ee6zNpGldK_8wFai8knI4NCokhsHX9NJQMp2Ybrr9PkXTsvpey9aMy3Iki-_Z1joFS_5uw-Ho-1ghDHfW-Lr-saxXEL7iJi2SPVGza8MXx_H6MkKmejEurk"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-4xl animate-bounce" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-xl px-gutter py-xl max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="font-headline-sm text-headline-sm text-primary italic">Atelier Maison</span>
+<p class="mt-md text-on-surface-variant text-sm">© 2024 Atelier Maison.<br/>Crafted for intentionality.</p>
+</div>
+<div class="grid grid-cols-2 gap-md md:col-span-3">
+<div class="flex flex-col gap-sm">
+<span class="font-label-caps text-label-caps text-primary">EXPLORE</span>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Catalog</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Our Craft</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Journal</a>
+</div>
+<div class="flex flex-col gap-sm">
+<span class="font-label-caps text-label-caps text-primary">ASSISTANCE</span>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Shipping</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Terms</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-sm mt-md md:mt-0">
+<span class="font-label-caps text-label-caps text-primary">SOCIAL</span>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Pinterest</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- FAB for mobile - Primary Action -->
+<button class="fixed bottom-gutter right-gutter w-14 h-14 bg-primary text-on-primary rounded-full shadow-lg flex items-center justify-center active:scale-90 transition-transform z-40 md:hidden">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+</button>
+<script>
+        // Drawer Logic
+        const menuTrigger = document.getElementById('menu-trigger');
+        const closeDrawer = document.getElementById('close-drawer');
+        const drawer = document.getElementById('mobile-drawer');
+        const drawerContent = document.getElementById('drawer-content');
+        const drawerOverlay = document.getElementById('drawer-overlay');
+
+        function openMenu() {
+            drawer.classList.remove('pointer-events-none');
+            drawerContent.classList.remove('translate-x-full');
+            drawerOverlay.classList.remove('opacity-0');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            drawer.classList.add('pointer-events-none');
+            drawerContent.classList.add('translate-x-full');
+            drawerOverlay.classList.add('opacity-0');
+            document.body.style.overflow = '';
+        }
+
+        menuTrigger.addEventListener('click', openMenu);
+        closeDrawer.addEventListener('click', closeMenu);
+        drawerOverlay.addEventListener('click', closeMenu);
+
+        // Simple scroll reveal
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            observer.observe(section);
+        });
+
+        // Add fade-in back specifically since we forced opacity 0
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-opacity', 'duration-1000');
+        });
+        
+        // CSS dynamic update for observer
+        const style = document.createElement('style');
+        style.innerHTML = `
+            section.fade-in {
+                opacity: 1 !important;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body></html>
