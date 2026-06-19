@@ -4,472 +4,521 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>AETERNA | Luxury Furniture Atelier</title>
+<title>ARCANE INTERIORS | Luxury Living Redefined</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-tint": "#5f5e5e",
-                        "on-tertiary": "#ffffff",
-                        "on-tertiary-fixed-variant": "#653d1e",
-                        "on-tertiary-fixed": "#301400",
-                        "surface-container-lowest": "#ffffff",
-                        "outline": "#747878",
-                        "outline-variant": "#c4c7c7",
-                        "on-primary-fixed": "#1c1b1b",
-                        "secondary-container": "#f0e0d3",
-                        "surface-container-high": "#eae8e3",
-                        "secondary": "#685c53",
-                        "secondary-fixed-dim": "#d3c4b8",
-                        "on-error": "#ffffff",
-                        "surface": "#fbf9f4",
-                        "surface-bright": "#fbf9f4",
-                        "on-secondary-fixed-variant": "#4f453c",
-                        "primary-fixed": "#e5e2e1",
-                        "inverse-surface": "#30312e",
-                        "background": "#fbf9f4",
-                        "surface-container-low": "#f5f3ee",
-                        "on-surface": "#1b1c19",
-                        "on-primary-container": "#858383",
-                        "inverse-primary": "#c8c6c5",
-                        "surface-container": "#f0eee9",
-                        "error-container": "#ffdad6",
-                        "on-primary": "#ffffff",
-                        "primary-container": "#1c1b1b",
-                        "secondary-fixed": "#f0e0d3",
-                        "on-error-container": "#93000a",
-                        "on-secondary-container": "#6e6258",
-                        "on-secondary": "#ffffff",
-                        "on-tertiary-container": "#aa7955",
-                        "tertiary-fixed": "#ffdcc5",
-                        "tertiary-container": "#301400",
-                        "surface-container-highest": "#e4e2dd",
-                        "surface-dim": "#dbdad5",
-                        "inverse-on-surface": "#f2f1ec",
-                        "error": "#ba1a1a",
-                        "on-primary-fixed-variant": "#474746",
-                        "tertiary": "#000000",
-                        "primary": "#000000",
-                        "on-surface-variant": "#444748",
-                        "primary-fixed-dim": "#c8c6c5",
-                        "tertiary-fixed-dim": "#f4bb92",
-                        "on-background": "#1b1c19",
-                        "on-secondary-fixed": "#221a13",
-                        "surface-variant": "#e4e2dd"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "spacing": {
-                        "unit": "8px",
-                        "margin-mobile": "20px",
-                        "margin-desktop": "80px",
-                        "container-max": "1440px",
-                        "gutter": "24px"
-                    },
-                    "fontFamily": {
-                        "headline-sm": ["Playfair Display"],
-                        "body-lg": ["Inter"],
-                        "label-caps": ["Inter"],
-                        "body-md": ["Inter"],
-                        "display-lg-mobile": ["Playfair Display"],
-                        "headline-md": ["Playfair Display"],
-                        "display-lg": ["Playfair Display"]
-                    },
-                    "fontSize": {
-                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
-                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
-                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
-                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
-                    }
-                },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#e5e2e1",
+                    "on-tertiary-container": "#848480",
+                    "inverse-on-surface": "#f2f0f0",
+                    "surface-container-high": "#e9e8e7",
+                    "on-background": "#1b1c1c",
+                    "on-tertiary": "#ffffff",
+                    "primary-container": "#1c1b1b",
+                    "on-primary-fixed-variant": "#474746",
+                    "on-secondary": "#ffffff",
+                    "secondary": "#755939",
+                    "secondary-fixed-dim": "#e5c099",
+                    "on-secondary-fixed-variant": "#5b4224",
+                    "primary": "#000000",
+                    "surface-variant": "#e4e2e2",
+                    "on-tertiary-fixed-variant": "#474744",
+                    "secondary-container": "#fdd6ae",
+                    "surface-bright": "#fbf9f8",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dbdad9",
+                    "tertiary-container": "#1b1c19",
+                    "on-primary-container": "#858383",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#e4e2e2",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#5f5e5e",
+                    "on-surface": "#1b1c1c",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "surface-container": "#efeded",
+                    "surface": "#fbf9f8",
+                    "on-surface-variant": "#444748",
+                    "tertiary-fixed": "#e4e2dd",
+                    "on-secondary-fixed": "#2b1701",
+                    "tertiary": "#000000",
+                    "outline": "#747878",
+                    "tertiary-fixed-dim": "#c8c6c2",
+                    "inverse-primary": "#c8c6c5",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#c4c7c7",
+                    "surface-container-low": "#f5f3f3",
+                    "on-secondary-container": "#785b3c",
+                    "secondary-fixed": "#ffddba",
+                    "background": "#fbf9f8",
+                    "inverse-surface": "#303031",
+                    "on-primary-fixed": "#1c1b1b",
+                    "on-tertiary-fixed": "#1b1c19"
             },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1440px",
+                    "margin-mobile": "20px",
+                    "section-gap": "120px",
+                    "margin-desktop": "80px",
+                    "unit": "8px",
+                    "gutter": "32px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Playfair Display"],
+                    "body-md": ["Hanken Grotesk"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "display-lg": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}]
+            }
+          }
         }
+      }
     </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
-            display: inline-block;
-            line-height: 1;
-        }
-        .ease-out-expo { transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
-        .glass-panel {
-            backdrop-filter: blur(20px);
-            background: rgba(255, 255, 255, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-        }
-        .dark .glass-panel {
-            background: rgba(0, 0, 0, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .masonry-grid {
-            column-count: 1;
-            column-gap: 24px;
-        }
-        @media (min-width: 768px) { .masonry-grid { column-count: 2; } }
-        @media (min-width: 1024px) { .masonry-grid { column-count: 3; } }
-        .masonry-item {
-            break-inside: avoid;
-            margin-bottom: 24px;
-        }
-        .text-vertical { writing-mode: vertical-rl; }
+        body { background-color: #fbf9f8; color: #1b1c1c; scroll-behavior: smooth; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .glass { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Custom hover for primary buttons as per style guidance */
+        .btn-primary:hover { background-color: #755939 !important; }
+        
+        /* Before/After slider styling */
+        .ba-container { position: relative; overflow: hidden; }
+        .ba-overlay { position: absolute; top: 0; left: 0; height: 100%; width: 50%; overflow: hidden; z-index: 10; border-right: 2px solid white; }
     </style>
 <style>
     body {
       min-height: max(884px, 100dvh);
     }
   </style>
-</head>
-<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed">
+  </head>
+<body class="font-body-md text-body-md overflow-x-hidden">
 <!-- TopAppBar -->
-<header class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-white/40 shadow-sm transition-all duration-300">
-<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
-<div class="flex items-center gap-6">
-<span class="material-symbols-outlined text-primary cursor-pointer">language</span>
-<div class="flex gap-4 font-label-caps text-label-caps text-secondary uppercase">
-<span class="text-primary border-b border-primary pb-1">EN</span>
-<span class="hover:text-primary cursor-pointer transition-colors">HY</span>
-<span class="hover:text-primary cursor-pointer transition-colors">RU</span>
+<header class="bg-surface/60 dark:bg-surface-container/60 backdrop-blur-[20px] fixed top-0 w-full z-50 border-b-[0.5px] border-outline-variant/30">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<button class="text-primary dark:text-primary-fixed transition-all duration-300 cubic-bezier(0.4, 0, 0.2, 1) hover:text-secondary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<a class="font-display-lg text-display-lg tracking-tighter text-primary dark:text-primary-fixed" href="#">ARCANE</a>
+<div class="flex items-center gap-8">
+<nav class="hidden lg:flex items-center gap-10">
+<a class="font-label-caps text-label-caps text-primary dark:text-primary-fixed font-semibold hover:text-secondary transition-colors duration-300" data-i18n="nav.collections" href="#">COLLECTIONS</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors duration-300" data-i18n="nav.projects" href="#">PROJECTS</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors duration-300" data-i18n="nav.heritage" href="#">HERITAGE</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="font-label-caps text-label-caps text-primary border border-outline px-3 py-1 hover:bg-surface-variant transition-all" id="lang-switch" onclick="toggleLangMenu()">EN</button>
+<div class="hidden absolute top-16 right-20 bg-surface shadow-2xl p-4 flex flex-col gap-2 z-[70]" id="lang-menu">
+<button class="text-left hover:text-secondary" onclick="switchLanguage('EN')">English</button>
+<button class="text-left hover:text-secondary" onclick="switchLanguage('HY')">Հայերեն</button>
+<button class="text-left hover:text-secondary" onclick="switchLanguage('RU')">Русский</button>
 </div>
 </div>
-<h1 class="font-display-lg text-headline-md tracking-widest text-primary">AETERNA</h1>
-<div class="flex items-center gap-6">
-<button class="material-symbols-outlined text-primary hover:scale-110 transition-transform">search</button>
-<button class="material-symbols-outlined text-primary hover:scale-110 transition-transform">favorite</button>
-<button class="material-symbols-outlined text-primary hover:scale-110 transition-transform">shopping_bag</button>
-<button class="material-symbols-outlined text-primary" onclick="document.documentElement.classList.toggle('dark')">dark_mode</button>
 </div>
 </div>
 </header>
+<!-- Navigation Drawer (Hidden by default, used for mobile) -->
+<aside class="fixed inset-y-0 left-0 w-80 z-[60] bg-surface dark:bg-surface-container-high shadow-2xl -translate-x-full transition-transform duration-300 ease-in-out" id="mobile-drawer">
+<div class="flex flex-col h-full py-8">
+<div class="px-8 mb-12">
+<h2 class="font-display-lg text-[32px] text-primary" data-i18n="drawer.title">ARCANE INTERIORS</h2>
+</div>
+<nav class="flex flex-col gap-4">
+<a class="text-primary dark:text-primary-fixed border-l-2 border-primary pl-8 font-label-caps text-label-caps py-2" data-i18n="nav.collections" href="#">COLLECTIONS</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant pl-8 font-label-caps text-label-caps py-2 hover:bg-surface-variant/50 transition-all" data-i18n="nav.projects" href="#">PROJECTS</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant pl-8 font-label-caps text-label-caps py-2 hover:bg-surface-variant/50 transition-all" data-i18n="nav.heritage" href="#">HERITAGE</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant pl-8 font-label-caps text-label-caps py-2 hover:bg-surface-variant/50 transition-all" data-i18n="nav.studio" href="#">STUDIO</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant pl-8 font-label-caps text-label-caps py-2 hover:bg-surface-variant/50 transition-all" data-i18n="nav.contact" href="#">CONTACT</a>
+</nav>
+</div>
+</aside>
 <main class="pt-20">
-<!-- Hero Search & Recommendations -->
-<section class="relative pt-24 pb-16 overflow-hidden">
-
-<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<!-- Hero Section -->
+<section class="relative h-[795px] w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center scale-105" data-alt="A cinematic, slow-motion wide shot of a sun-drenched, high-end architectural living room featuring a monolithic marble coffee table and a soft velvet modular sofa. Warm, golden afternoon sunlight filters through floor-to-ceiling sheer curtains, creating a serene, luxurious atmosphere. The aesthetic is ultra-minimalist and premium with a palette of soft creams, rich charcoals, and natural wood textures." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBmyan5sb2M882nZrTnUBW66KaDZUWzEahYL8GiVgWpbz3t4aouIDaUsKuf5uaLa9YcKzt8Dr6FSQUzoMiBdBsLXXzK8TdIExTssOoR9N1BNtAGVV9O8aDNPVwPnb9y4FXhoEU69HInui8VE_og0I-fVTiUZzw5Y5sqbtBG23fsQfhsgnoHI7_2ld9zyknxvXh1I-BeoK60xlkdVzFNTIgWc1H4NA2ykFS4LR6OUTdoRfbLGDC2jpGXCIdKbwp_7w_RfrST_N0Xuv9U')"></div>
+<div class="absolute inset-0 bg-black/20"></div>
+</div>
+<div class="relative z-10 text-center text-white px-margin-mobile">
+<h1 class="font-display-lg text-[48px] md:text-display-lg mb-8 tracking-tight" data-i18n="home.hero_title">Luxury Living Redefined</h1>
+<button class="btn-primary bg-primary text-on-primary px-12 py-5 font-label-caps text-label-caps transition-all duration-300 cubic-bezier(0.4, 0, 0.2, 1)" data-i18n="home.shop_now">SHOP COLLECTION</button>
+</div>
+</section>
+<!-- Featured Collections Carousel -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block" data-i18n="home.curated">CURATED SERIES</span>
+<h2 class="font-display-lg text-headline-md md:text-[56px] leading-tight" data-i18n="home.designer_collections">Designer Collections</h2>
+</div>
+<div class="flex gap-4">
+<button class="p-4 border border-outline-variant hover:bg-primary hover:text-white transition-all"><span class="material-symbols-outlined">west</span></button>
+<button class="p-4 border border-outline-variant hover:bg-primary hover:text-white transition-all"><span class="material-symbols-outlined">east</span></button>
+</div>
+</div>
+<div class="flex gap-gutter overflow-x-auto no-scrollbar pb-8">
+<!-- Collection Card 1 -->
+<div class="min-w-[300px] md:min-w-[440px] group cursor-pointer">
+<div class="aspect-[3/4] mb-6 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A sophisticated close-up of a handcrafted walnut wood lounge chair with deep emerald velvet upholstery, placed against a textured limestone wall. The lighting is focused and moody, highlighting the artisanal wood joinery and premium textile quality. Part of a luxury furniture collection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-ZVsD0DlObcCJnz4nxBhbNm0pbw5H-LYq5LTGIaUG4ulrHwXSbvPhdqzd9ydfHbi8EgD9pnQii9CmdwEja3LkYIK6A8FNi89iYB4LhoSICjERftFXTRp_6IK3PSrAE5G4NhzB2jrosJ_QvajRFHHZVnN6nUiwgrJ-WBXDcV99dB69T8V5SPq4H5B-gtPDycq2OczquJhP0s-JnVJVwI8WOhetXPO6qtpnLG2zm8yvjamxpnkKFyXY58t_1WyQedSmWj71IVYUqsBk"/>
+</div>
+<div class="border-b border-outline-variant pb-4 mb-2 flex justify-between items-baseline">
+<h3 class="font-headline-md text-headline-md" data-i18n="home.collection_1">The Heritage Suite</h3>
+<span class="font-label-caps text-label-caps text-secondary" data-i18n="home.explore">EXPLORE</span>
+</div>
+<p class="text-on-surface-variant font-body-md" data-i18n="home.collection_1_desc">A tribute to mid-century modernism with a contemporary soul.</p>
+</div>
+<!-- Collection Card 2 -->
+<div class="min-w-[300px] md:min-w-[440px] group cursor-pointer">
+<div class="aspect-[3/4] mb-6 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A minimalist sculptural dining table made of matte black basalt stone, surrounded by sleek chairs with bouclé fabric. The scene is set in a spacious penthouse with soft morning light and a serene, monochromatic color palette. High-end architectural furniture design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5VtriyJkbUjHiPRcfOG__AspL3PCMq3mNmNI6lQ-SW3ylr-1cPJnwnOt9LCP-re7XBKXsI3R6dR7oUGmhN8J2r5ut6F7PgcBgo6dLVCUvI-hymOUjC_u1xt9mhyiZjHEVAwZqC0-ogee0GdS4lQ3dM0tjcas1diXZyDHnce0ixwNmTraIzQ6Uuyh_1qCMxx75ev6Y26PQPJdnK5KtTggOpSn82nnsfZjms1-AxN5phJu8YciEYekU2kyzqhv6FYASkG899YflJwkZ"/>
+</div>
+<div class="border-b border-outline-variant pb-4 mb-2 flex justify-between items-baseline">
+<h3 class="font-headline-md text-headline-md" data-i18n="home.collection_2">Monolith Series</h3>
+<span class="font-label-caps text-label-caps text-secondary" data-i18n="home.explore">EXPLORE</span>
+</div>
+<p class="text-on-surface-variant font-body-md" data-i18n="home.collection_2_desc">Brutalist forms softened by tactile luxury and neutral tones.</p>
+</div>
+<!-- Collection Card 3 -->
+<div class="min-w-[300px] md:min-w-[440px] group cursor-pointer">
+<div class="aspect-[3/4] mb-6 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An ethereal bedroom scene featuring a low-profile bed with oversized headboard panels in soft beige linen. The room is decorated with minimalist ceramic vases and a single abstract painting. Lighting is diffuse and airy, emphasizing a quiet luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1ffZpfXEXivXXv1-oFxFufPODijkmtMtoONLeGuexhVm_Y0trak6Nx-cWI7-_rlbZHlpnfiqES6-uEhZnKwI0vgIUbAIFra-DHMBQmAL_975p0WLpAxbgWi9PTibE1nKYbmuM0c2m5v-Suoc0rOm_eEsZAckkXcLZLSAzPcmtia4Z4pgj4UUfm7VhDAo682WgnFjCSPT51quGveo3jzbV_Y6UibT3XABJAU0lgvmUlOHSOeoKx4J_ZH-5VB007ZEClaSNaUFrp6pm"/>
+</div>
+<div class="border-b border-outline-variant pb-4 mb-2 flex justify-between items-baseline">
+<h3 class="font-headline-md text-headline-md" data-i18n="home.collection_3">Ethereal Living</h3>
+<span class="font-label-caps text-label-caps text-secondary" data-i18n="home.explore">EXPLORE</span>
+</div>
+<p class="text-on-surface-variant font-body-md" data-i18n="home.collection_3_desc">Designing spaces for tranquility, light, and mental clarity.</p>
+</div>
+</div>
+</section>
+<!-- Before & After Transformation Gallery -->
+<section class="bg-surface-container py-section-gap">
+<div class="px-margin-desktop max-w-container-max mx-auto">
 <div class="text-center mb-16">
-<h2 class="font-display-lg text-display-lg mb-8 opacity-0 translate-y-4 animate-[fadeInUp_1s_ease-out_forwards]">Curated Elegance</h2>
-<div class="max-w-2xl mx-auto glass-panel rounded-full p-2 flex items-center shadow-2xl">
-<span class="material-symbols-outlined px-4 text-outline">search</span>
-<input class="bg-transparent border-none focus:ring-0 w-full font-body-lg text-body-lg placeholder:text-outline-variant" placeholder="Search our collections..." type="text"/>
-<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-caps text-label-caps uppercase hover:bg-on-primary-container transition-all">Identify Style</button>
+<h2 class="font-display-lg text-headline-md md:text-display-lg mb-4" data-i18n="home.before_after">Before &amp; After</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto" data-i18n="home.ba_desc">Witness the evolution of ordinary spaces into Arcane masterpieces.</p>
 </div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="ba-container aspect-video group" id="ba-slider-1">
+<div class="w-full h-full bg-cover bg-center" data-alt="A 'Before' photo of a cluttered, dated 1990s living room with orange-toned wood flooring, floral wallpaper, and mismatched bulky furniture. The lighting is harsh and yellow, highlighting the disorganized and cramped feel of the space." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3wYv1EsnY_YN6ChOF8J_F12hv1aNiQMvEhDCUYlTDzWT7owarlUWXoTvX62SiRg8mfeLTWLvaQ7oQWz0Em-wM3FTpkXyw5cLauX9HSrri4E6TrCdAy86AN9RHlsu827Lnv0kPUjlVZFXxxSyZ3HcvNjSmovDmn4t1gJgpQe7uN3UDvTXaKIcwHvFqIjtBrBfkivGN1h_aP5ver_BQrFYbUN3AC5dMgRLubIJ_0hWyxKoMfo211WWXUV6gGOswYzKEOfKE_xvyuHCO')"></div>
+<div class="ba-overlay" id="ba-overlay-1">
+<div class="w-[200%] h-full bg-cover bg-center" data-alt="The 'After' transformation of the same living room into a stunning modern sanctuary. Features sleek white oak flooring, textured cream walls, a large custom-built floating fireplace, and minimalist designer furniture. The lighting is soft and layered, creating an expansive, airy, and high-end aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVrKC_BpUQIcYPbp61TPugyFuLt-EAeblzhPypAGlqp_WaLUF5nJbmgvyL9MwUH_oEoVKKiwd9llLLfp4D9KA87vJ1lWfAthr30HFQ1kM1hddzBX5Qv-n4il_CCYfmTX977oxs35fx4ei5eIeuI1vRyXrKCb9ChOsQVyXAs7xp811Ew6t4_I42XO4cJyzzvKgy_O-mEfziuVWzE9fno3ZQFyfIiQZ9-ngbv3uwrQrEN2wseVvyG9qjoA0CEhTBj3ciLGdMdFAWskUU')"></div>
 </div>
-<!-- AI Recommendations -->
-<div class="flex flex-col gap-6">
-<div class="flex justify-between items-end">
-<h3 class="font-label-caps text-label-caps text-secondary-fixed-dim uppercase tracking-widest">AI Tailored for you</h3>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="bg-white/80 glass px-6 py-3 font-label-caps text-label-caps text-primary shadow-xl" data-i18n="home.slide_view">SLIDE TO VIEW</div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter overflow-x-auto pb-4">
-<!-- Recommendation Item 1 -->
-<div class="group relative min-w-[280px] aspect-[4/5] glass-panel overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-500">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A luxurious minimalist armchair with deep charcoal velvet upholstery, placed in a high-end architectural showroom with floor-to-ceiling windows and soft, golden-hour natural lighting. The mood is sophisticated and calm, emphasizing the texture of the fabric and the precision of the walnut frame. High-key light-mode aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVcr_diOYFB92JQ4POG7P1dPkIme2d_mJwVLrNSgC8SWQbNQOhLuU-jWcGEJAZi6fnSRfRN5QLq8rS-f74sZBxZXZmCNmgTEMV-lXsNwiGcuyK2yKdZfu4rIeUiaBhB75BvV0STOCiMwE56h3tVxOFJ8oX-4HO3WBBtubSNhw-S96GssTxXXFN4aoWIohy8jT1H46-BUVNDVcA0VRhfUWFDeSzXN0qysn7tU-L0HRzX5QqgvSt11s2x959bnjRqA3cfMsYkD-E5VJe')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
-<div class="absolute bottom-0 p-6 text-white w-full">
-<p class="font-label-caps text-label-caps opacity-80 mb-1">AETERNA CLASSICS</p>
-<p class="font-headline-sm text-headline-sm">Velvet Muse Lounge</p>
+<input class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20" max="100" min="0" oninput="handleSlider(this, 1)" type="range" value="50"/>
 </div>
+<div class="space-y-8">
+<div class="border-l-4 border-secondary pl-8">
+<h3 class="font-headline-md text-[28px] mb-4" data-i18n="home.project_title">Manhattan Penthouse</h3>
+<p class="text-on-surface-variant mb-6" data-i18n="home.project_desc">A complete structural and aesthetic overhaul focusing on maximizing natural light and creating a seamless flow between the kitchen and living areas.</p>
+<div class="flex gap-12">
+<div>
+<span class="block font-label-caps text-[10px] text-on-surface-variant mb-1" data-i18n="home.duration">DURATION</span>
+<span class="font-body-md font-semibold">4 Months</span>
 </div>
-<!-- Recommendation Item 2 -->
-<div class="group relative min-w-[280px] aspect-[4/5] glass-panel overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-500">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A grand marble dining table with a unique veining pattern in white and grey, set in a spacious gallery-like room with polished concrete floors. The lighting is focused and cinematic, highlighting the smooth texture of the stone. The design aesthetic is modern minimalist with a focus on natural materials." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxtxSV5aGXe2JN5UcRMXaimJkkLbWa7TYe5Il7VPWzUYipTl61pT-Rawk6GWjMC14JfNM8Mv7QfbrYr1gEHo3lqmpJ2dOO3cqg9DAh2wAiAvMG4mrC2Vmmf5JeLYWSGQNWWr81-KUBPVLhejCa1hSU2EIDKgrZC6sDNql1Y6KSOTUrCAx6-D7zGv39qifT5Ku0QJXOqA8OQGx-9uv5FxnRXM60_rXau2dY7FF6Q05wPdt3hgP5E-l57d1Uqz6s9sA59JS-QtgDAEGj')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
-<div class="absolute bottom-0 p-6 text-white w-full">
-<p class="font-label-caps text-label-caps opacity-80 mb-1">CARRARA SERIES</p>
-<p class="font-headline-sm text-headline-sm">Monolith Dining Table</p>
+<div>
+<span class="block font-label-caps text-[10px] text-on-surface-variant mb-1" data-i18n="home.location">LOCATION</span>
+<span class="font-body-md font-semibold">New York, NY</span>
 </div>
-</div>
-<!-- Recommendation Item 3 -->
-<div class="group relative min-w-[280px] aspect-[4/5] glass-panel overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-500">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A pair of sleek, brushed brass floor lamps with architectural lines, illuminating a minimalist living space with soft, warm light. The background features a subtle glass-walled patio at dusk. The mood is one of quiet luxury and technical precision, reflecting a high-end furniture atelier environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-7of3YooALpr3HLqKK2dYy_qoPzk0kwqzm4AJfgNbXqMIZR3QskLnl5cnTDrUxyavbEXPtOQnhJjRNrNdT4zRsXA8BAeYgOB3HNi6BOqJpL_u4dGntPePNIg3LVty271RFUO78qSHHWFdlbYRH1F1lQMMll8eC4ca9KHcfibnrC0m5JOiNWJslJf8vsJ3gGDyzMEWLeCkfoo0Ok62B4sgLF_1zk6-vL8ZqIHP8cTcre_nlcqTcvQ1bRHDWI9Pm2nDQ3Lb8zU1lB0D')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
-<div class="absolute bottom-0 p-6 text-white w-full">
-<p class="font-label-caps text-label-caps opacity-80 mb-1">LUMINOUS COLLECTION</p>
-<p class="font-headline-sm text-headline-sm">Solaris Floor Lamp</p>
-</div>
-</div>
-<!-- Recommendation Item 4 -->
-<div class="group relative min-w-[280px] aspect-[4/5] glass-panel overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-500">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A modular shelving system made of hand-finished light oak and matte black steel. The shelving is accessorized with high-end art books and small marble sculptures. The setting is a bright, airy designer studio with soft shadows and premium materials visible in every detail." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-psljGc6d-nNQ4JsXHiG8vv-fmQhdnkC2puGcvHjofpxsaEzyl0eoIdPHPtf6Wtj1XT1OOtzs9ymRgNSLTaKhs2TXgqYzjF2tecajZgvrKOFo8k_SYYuPpdT-zphaK30rEKlgaI5A2bHZh-ckq4aw07qDdxlb-03TOAtUVBp6TkK698eJg2RVPs_OyGpNcywZtNnmjL2AxapfU3EVosVBkXKNwNZHWlBIbcNhu-W3Bvx8MXrcenOf1P86A3GhVryhS_8mOyKJKJXO')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
-<div class="absolute bottom-0 p-6 text-white w-full">
-<p class="font-label-caps text-label-caps opacity-80 mb-1">BESPOKE MODULARS</p>
-<p class="font-headline-sm text-headline-sm">Horizon Oak Unit</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- Shop Content -->
-<section class="max-w-container-max mx-auto px-margin-desktop py-12 flex flex-col md:flex-row gap-gutter">
-<!-- Filters Sidebar -->
-<aside class="w-full md:w-64 shrink-0 space-y-12">
+<!-- Smart Recommendations (Bento Grid) -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+<h2 class="font-display-lg text-headline-md md:text-[56px] mb-12 text-center" data-i18n="home.featured_products">Featured Products</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-[auto] md:h-[900px]">
+<!-- Main Product -->
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-low group relative overflow-hidden flex flex-col justify-end p-10">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A full-length shot of a grand, curved sectional sofa in a pearl-white bouclé fabric. It is the centerpiece of a high-ceilinged room with architectural concrete pillars. The lighting is editorial and sophisticated, emphasizing the soft curves and premium texture of the sofa. Modern luxury furniture showcase." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyDaL4283FXUiK-vipn4jfu2GuFM7guFW15XjOhjEA04_FBaWplKY3U2C_Vzkwk0AsiGqqtuEds5GlAIZYV5G__-YdcLpUfgFICkrAd8NZZ9xJXcxQswsBREEbDgc3ayBUAP-sNy2cqaL6Q7Orpxbj6ssV3Jf2aUR4Ftk80P8TvUNqlVxqZcbYJMKrxKJwNOuq8G8pIvnXBsBu_BQle5lr2w-pJt89gdMBiDTknERFT4KmdTUwBbPcMvr9C77GeX-mvY7uwOl-x2yT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="relative z-10 text-white">
+<span class="font-label-caps text-label-caps text-primary-fixed mb-2 block" data-i18n="home.best_seller">BEST SELLER</span>
+<h3 class="font-display-lg text-[32px] md:text-[40px] mb-4" data-i18n="home.p1_name">Aura Curved Sectional</h3>
+<p class="font-body-md text-primary-fixed/80 max-w-sm mb-6" data-i18n="home.p1_desc">A sculptural centerpiece designed for fluid conversation and ultimate comfort.</p>
+<button class="bg-white text-black px-8 py-3 font-label-caps text-label-caps hover:bg-secondary hover:text-white transition-colors" data-i18n="home.shop_now">SHOP NOW</button>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="md:col-span-2 md:row-span-1 bg-surface-container group relative overflow-hidden flex items-center p-10">
+<div class="w-1/2 pr-6 relative z-10">
+<h3 class="font-headline-md text-headline-md mb-2" data-i18n="home.p2_name">Vertex Floor Lamp</h3>
+<p class="font-body-md text-on-surface-variant mb-4" data-i18n="home.p2_desc">Precision engineered brass with hand-blown glass.</p>
+<span class="font-label-caps text-label-caps font-bold">$1,240</span>
+</div>
+<div class="w-1/2 h-full absolute right-0 top-0 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A minimalist architectural floor lamp with a slender aged brass stem and a geometric frosted glass globe. The lamp is positioned in a serene corner next to a tall indoor plant. Soft, warm ambient light glow. High-end lighting design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMHTH2PJY6BLfvTqnxf0BJ3Rqm5lnzdxjPB3VCss952xnXFLk2MzMdBq50ail8Yu-kwHfCAYq9uJFi-OD_g2qDzERXyfahrZOpLyu_V9xxv5DVh_yisY_4pidDLT1MewIh46l0D2A0Ssi6dyH4x_HGDm6Kauv2egcO6gCSDc09pAitB651NvrksL4dcu_DET9fs0PJ5cyGlEvXKM0-iRd2TRNMmBA7Uqmep1ReVvc_g7pCwVl3L84pgN2f023fdGbBr4ggxFi6_Ya7"/>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="md:col-span-1 md:row-span-1 bg-surface-container-high group relative overflow-hidden p-8 flex flex-col justify-end">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-40" data-alt="Close-up of a minimalist side table made of polished travertine stone with a unique porous texture. On top sits a single art book and a designer ceramic cup. Bright, clean light-mode aesthetic with soft shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_xjSyeWQuQPJBowoA2eXDXQ6oJPnaME04zusKs0B2C1KLEqCjCbGeRFEplipF1BRpLmO-8K0-qs_9XLnpZGe0wgSN3PM1Y3DvyUa5XYgwhfKhAhlqJPACEFT2MsaO51yNy1L3HxtSey6eRThezkTpo0IoRA3asFvCBvqndNjqHZE6xx2dWnHwc0Egu70znLsoTogTfbIlRmJTIIXBDiR3hbRNrO3vu5AXSZDkju_IEniSm6y09DrcBp242diubCVktWC80gcfDj_Y"/>
+<div class="relative z-10">
+<h3 class="font-label-caps text-label-caps font-bold mb-1" data-i18n="home.p3_name">Travertine Side Table</h3>
+<span class="font-body-md text-on-surface-variant">$850</span>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="md:col-span-1 md:row-span-1 bg-primary text-white p-8 flex flex-col justify-between hover:bg-secondary transition-colors duration-500 cursor-pointer">
+<span class="material-symbols-outlined text-4xl">stylus</span>
 <div>
-<h4 class="font-label-caps text-label-caps border-b border-outline-variant pb-4 mb-6 uppercase tracking-widest">Collections</h4>
-<ul class="space-y-4 font-body-md text-secondary">
-<li class="flex justify-between items-center group cursor-pointer text-primary">
-<span>All Creations</span>
-<span class="text-[10px] opacity-40">124</span>
-</li>
-<li class="flex justify-between items-center group cursor-pointer hover:text-primary transition-colors">
-<span>Living Space</span>
-<span class="text-[10px] opacity-40">48</span>
-</li>
-<li class="flex justify-between items-center group cursor-pointer hover:text-primary transition-colors">
-<span>Culinary Atelier</span>
-<span class="text-[10px] opacity-40">32</span>
-</li>
-<li class="flex justify-between items-center group cursor-pointer hover:text-primary transition-colors">
-<span>Sanctuary / Bedroom</span>
-<span class="text-[10px] opacity-40">24</span>
-</li>
-<li class="flex justify-between items-center group cursor-pointer hover:text-primary transition-colors">
-<span>Office of the Future</span>
-<span class="text-[10px] opacity-40">20</span>
-</li>
-</ul>
+<h3 class="font-headline-md text-xl mb-2" data-i18n="home.concierge_title">Bespoke Concierge</h3>
+<p class="font-body-md text-white/70 text-sm" data-i18n="home.concierge_desc">Consult with our lead designers for a tailored interior plan.</p>
 </div>
-<div>
-<h4 class="font-label-caps text-label-caps border-b border-outline-variant pb-4 mb-6 uppercase tracking-widest">Materials</h4>
-<div class="flex flex-wrap gap-3">
-<button class="px-4 py-2 border border-outline-variant rounded-full text-xs hover:border-primary transition-all">Carrara Marble</button>
-<button class="px-4 py-2 border border-outline-variant rounded-full text-xs hover:border-primary transition-all">Smoked Oak</button>
-<button class="px-4 py-2 border border-outline-variant rounded-full text-xs hover:border-primary transition-all">Brushed Brass</button>
-<button class="px-4 py-2 border border-outline-variant rounded-full text-xs hover:border-primary transition-all">Full-Grain Leather</button>
-</div>
-</div>
-<div>
-<h4 class="font-label-caps text-label-caps border-b border-outline-variant pb-4 mb-6 uppercase tracking-widest">Price Range</h4>
-<div class="px-2">
-<input class="w-full h-1 bg-outline-variant rounded-lg appearance-none cursor-pointer accent-primary" type="range"/>
-<div class="flex justify-between mt-4 text-xs font-label-caps text-secondary uppercase">
-<span>$1,000</span>
-<span>$50,000+</span>
-</div>
-</div>
-</div>
-<div class="pt-8">
-<div class="glass-panel p-6 rounded-xl border-dashed border-2 border-outline-variant/30 text-center">
-<span class="material-symbols-outlined text-4xl mb-4 text-secondary-fixed-dim">auto_awesome</span>
-<p class="font-headline-sm text-[16px] mb-2 leading-tight">Can't find the perfect fit?</p>
-<p class="text-xs text-secondary mb-4">Launch our AI Bespoke configurator for tailored dimensions.</p>
-<button class="w-full border border-primary py-2 text-xs font-label-caps uppercase hover:bg-primary hover:text-on-primary transition-all">Configure Bespoke</button>
-</div>
-</div>
-</aside>
-<!-- Product Masonry Grid -->
-<div class="flex-grow">
-<div class="flex justify-between items-center mb-10">
-<p class="font-body-md text-secondary">Showing <span class="text-primary font-semibold">12</span> of 124 masterpieces</p>
-<div class="flex items-center gap-4">
-<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary">Sort by:</span>
-<select class="bg-transparent border-none focus:ring-0 font-label-caps text-label-caps uppercase cursor-pointer">
-<option>Curated Selection</option>
-<option>New Arrivals</option>
-<option>Price: High to Low</option>
-</select>
-</div>
-</div>
-<div class="masonry-grid">
-<!-- Product Card 1 -->
-<div class="masonry-item group cursor-pointer">
-<div class="relative overflow-hidden glass-panel aspect-[3/4]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-alt="A close-up shot of a sculptural side table crafted from translucent resin and reclaimed wood, glowing softly under museum-style lighting. The environment is a sterile, white architectural space that emphasizes the table's artistic form. The photo is high-resolution with a focus on tactile materiality." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBltDwvdF3LTK1k7hdswDYzuznst4PoR_OTz_YRb9ylfRiFP5rV5V_DfXIW6woH7hXztJjZwmSYRT0zrmJcaiSSNJ2EcgbQQBJuQwijV45RRRKXrr9h2c4LuZ6gBc_vx2wurFfX27mfyRlzrA29RiGOuim9rHHxRg9svwlvjv32ReJp4pu9qCgvlW_fe3HTza2DE770d-86V7JFI5V7USFteZnlrW570PhlFcjV7YE-aC9nATMuc7OBU7RMthK1IxbfTTi_-6cGy0gp')"></div>
-<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-[-10px] group-hover:translate-y-0">
-<button class="w-10 h-10 rounded-full glass-panel flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-lg"><span class="material-symbols-outlined">favorite</span></button>
-</div>
-<div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<div class="absolute bottom-0 w-full p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out-expo bg-white/40 backdrop-blur-md">
-<button class="w-full py-3 bg-primary text-on-primary font-label-caps text-[10px] uppercase tracking-[0.2em] hover:bg-on-primary-container">Quick View</button>
-</div>
-</div>
-<div class="mt-6">
-<div class="flex justify-between items-start">
-<div>
-<h5 class="font-headline-sm text-body-lg mb-1 group-hover:underline underline-offset-4">Ethereal Resin Plinth</h5>
-<p class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Collections / Art-Line</p>
-</div>
-<span class="font-body-md text-primary">$4,200</span>
-</div>
-</div>
-</div>
-<!-- Product Card 2 -->
-<div class="masonry-item group cursor-pointer">
-<div class="relative overflow-hidden glass-panel aspect-[1/1]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-alt="A luxurious modular sofa in a deep emerald velvet fabric, arranged in a circular formation within a mid-century modern living room. Warm ambient lighting creates soft shadows across the velvet's sheen. The overall aesthetic is one of opulent comfort and architectural balance, captured in a bright light-mode setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCeQ0hOnAFPewgyOSvYFRZjzJOYusBUwpvGR3cpZUbtP5D5TTXWhMB6nQjtiA1XJEvMFRVdIaF2e19UYrF-81dF6RJysPT8PtQ0VEQPPozumoggOGXIrnACMqDZE3u7hhyrMAjrPQzJIPf-odqLX04XIjZA7ZhzRXJDMsMQngfoj7XGWy9QcCzeNYm3FiUESyBFH5UQuaI--yvwWbmoSgwUsW-QVsaB-QJzUnakgc5gwsAopQl1VQu3tLfzPAMhU2g7eAFSoiAO1ZbX')"></div>
-<div class="absolute bottom-0 w-full p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out-expo bg-white/40 backdrop-blur-md">
-<button class="w-full py-3 bg-primary text-on-primary font-label-caps text-[10px] uppercase tracking-[0.2em]">Quick View</button>
-</div>
-</div>
-<div class="mt-6">
-<div class="flex justify-between items-start">
-<div>
-<h5 class="font-headline-sm text-body-lg mb-1 group-hover:underline">Emerald Modular Cloud</h5>
-<p class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Living Space</p>
-</div>
-<span class="font-body-md text-primary">$18,500</span>
-</div>
-</div>
-</div>
-<!-- Product Card 3 -->
-<div class="masonry-item group cursor-pointer">
-<div class="relative overflow-hidden glass-panel aspect-[4/5]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-alt="An avant-garde chandelier made of hundreds of hand-blown glass drops, suspended from a vaulted ceiling in a luxury showroom. Each drop catches the light, creating a sparkling, ethereal effect. The backdrop is dark and minimalist to let the glass installation be the focal point. High-end product photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAACrbDFn5xZ3ISbN0owVkch1siATIaf6RQBSCriERFLsc9_wWGaBJHivmXLoIYqrjS-YXxA0iUtkhke882TuVAdM2JEKNevH7KgtE_4FzBDAcOrZ9va5s2EdNJbBWGtycBMcwI-NEYce-ehft-lIaa_jnja3PhuWPca56WI0Lkkv99gLSZS_fqWq0qFWprTqlRggFrxuvxqSOWNjfSFhPeoFE2UEQ4kr6pBvIILnuz0MXgFC4s8GPxcOGDIZvpJt7b-74UK9dsnORj')"></div>
-<div class="absolute bottom-0 w-full p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out-expo bg-white/40 backdrop-blur-md">
-<button class="w-full py-3 bg-primary text-on-primary font-label-caps text-[10px] uppercase tracking-[0.2em]">Quick View</button>
-</div>
-</div>
-<div class="mt-6">
-<div class="flex justify-between items-start">
-<div>
-<h5 class="font-headline-sm text-body-lg mb-1 group-hover:underline">Raindrop Glass Chandelier</h5>
-<p class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Luminous Atelier</p>
-</div>
-<span class="font-body-md text-primary">$9,800</span>
-</div>
-</div>
-</div>
-<!-- Product Card 4 -->
-<div class="masonry-item group cursor-pointer">
-<div class="relative overflow-hidden glass-panel aspect-[3/2]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-alt="A minimalist low-profile bed frame made of light-colored ash wood, featuring an integrated leather headboard. The bed is styled with neutral linen bedding in a sun-drenched minimalist bedroom. The look is airy, clean, and extremely peaceful, highlighting the natural grain of the wood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBO_8V0mYxjcddGZsRngc7Fu9ZehU6Y2yxRpmyqCKOvXPori_Rfzr2MmRfuHtUZn86QWFPhWYyNV7afpAqunrl721ngTsdLTP9kiPZBjT5fr03ggkKW4IiR7iNts0vROAf8MKDlI8WNQwmU72VtqB6gBouUk3tmeDkme-m5Jl9PXrZtgQVG1FB8ZI5ZEuCZ30GNuGX_rYqL8lqQLjvwbqS9ABFp1MFFXP-E39kgUCH4mmP8kBu0uG1kEMpEdViPhEG74CJZ-KuRTkxx')"></div>
-<div class="absolute bottom-0 w-full p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out-expo bg-white/40 backdrop-blur-md">
-<button class="w-full py-3 bg-primary text-on-primary font-label-caps text-[10px] uppercase tracking-[0.2em]">Quick View</button>
-</div>
-</div>
-<div class="mt-6">
-<div class="flex justify-between items-start">
-<div>
-<h5 class="font-headline-sm text-body-lg mb-1 group-hover:underline">Zenith Ash Frame Bed</h5>
-<p class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Sanctuary</p>
-</div>
-<span class="font-body-md text-primary">$12,400</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Pagination -->
-<div class="flex justify-center mt-20 gap-4">
-<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:border-primary transition-colors"><span class="material-symbols-outlined">chevron_left</span></button>
-<button class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-caps">1</button>
-<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center font-label-caps hover:border-primary transition-colors">2</button>
-<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center font-label-caps hover:border-primary transition-colors">3</button>
-<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:border-primary transition-colors"><span class="material-symbols-outlined">chevron_right</span></button>
+<span class="material-symbols-outlined self-end">arrow_outward</span>
 </div>
 </div>
 </section>
 </main>
-<!-- Sticky Floating Actions -->
-<div class="fixed bottom-10 right-10 flex flex-col gap-4 z-40">
-<div class="group relative">
-<div class="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-primary text-on-primary px-4 py-2 rounded-lg font-label-caps text-[10px] opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Compare (2)</div>
-<button class="w-14 h-14 rounded-full bg-white shadow-2xl flex items-center justify-center text-primary border border-outline-variant/30 hover:scale-110 transition-transform">
-<span class="material-symbols-outlined">compare_arrows</span>
-</button>
-</div>
-<div class="group relative">
-<div class="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-primary text-on-primary px-4 py-2 rounded-lg font-label-caps text-[10px] opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">My Wishlist</div>
-<button class="w-14 h-14 rounded-full bg-white shadow-2xl flex items-center justify-center text-primary border border-outline-variant/30 hover:scale-110 transition-transform">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
-</button>
-</div>
-</div>
 <!-- Footer -->
-<footer class="bg-surface-container-lowest border-t border-secondary-fixed-dim/30 w-full pt-20 pb-10 mt-20">
-<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-12 gap-gutter">
-<div class="col-span-12 md:col-span-4 space-y-8">
-<h2 class="font-display-lg text-headline-sm text-primary">AETERNA</h2>
-<p class="font-body-md text-secondary max-w-sm">Designing tomorrow's heritage through the lens of architectural precision and tactile luxury. Each piece is a testament to timeless craftsmanship.</p>
-<div class="flex gap-6">
-<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary transition-colors">brand_awareness</span>
-<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary transition-colors">public</span>
-<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary transition-colors">podium</span>
+<footer class="bg-primary-container dark:bg-primary-container border-t-[0.5px] border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<h2 class="font-display-lg text-display-lg text-on-primary-container mb-8">ARCANE</h2>
+<p class="font-body-md text-on-primary-container/70" data-i18n="footer.about">Crafting timeless spaces through architectural precision and tactile luxury since 1994.</p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-on-primary-container mb-4" data-i18n="footer.navigation">NAVIGATION</span>
+<a class="text-on-primary-container/70 hover:text-secondary-fixed transition-colors duration-300" data-i18n="nav.collections" href="#">COLLECTIONS</a>
+<a class="text-on-primary-container/70 hover:text-secondary-fixed transition-colors duration-300" data-i18n="nav.projects" href="#">PROJECTS</a>
+<a class="text-on-primary-container/70 hover:text-secondary-fixed transition-colors duration-300" data-i18n="nav.heritage" href="#">HERITAGE</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-on-primary-container mb-4" data-i18n="footer.legal">LEGAL</span>
+<a class="text-on-primary-container/70 hover:text-secondary-fixed transition-colors duration-300" data-i18n="footer.privacy" href="#">PRIVACY</a>
+<a class="text-on-primary-container/70 hover:text-secondary-fixed transition-colors duration-300" data-i18n="footer.terms" href="#">TERMS</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-on-primary-container mb-4" data-i18n="footer.social">SOCIAL</span>
+<a class="text-on-primary-container/70 hover:text-secondary-fixed transition-colors duration-300" data-i18n="footer.instagram" href="#">INSTAGRAM</a>
+<a class="text-on-primary-container/70 hover:text-secondary-fixed transition-colors duration-300" data-i18n="footer.pinterset" href="#">PINTEREST</a>
 </div>
 </div>
-<div class="col-span-6 md:col-span-2 space-y-6">
-<h5 class="font-label-caps text-label-caps uppercase tracking-widest text-primary">Explore</h5>
-<ul class="space-y-4 text-secondary font-body-md">
-<li class="hover:text-primary hover:translate-x-1 transition-all cursor-pointer">Collections</li>
-<li class="hover:text-primary hover:translate-x-1 transition-all cursor-pointer">Showroom</li>
-<li class="hover:text-primary hover:translate-x-1 transition-all cursor-pointer">Bespoke</li>
-<li class="hover:text-primary hover:translate-x-1 transition-all cursor-pointer">Heritage</li>
-</ul>
-</div>
-<div class="col-span-6 md:col-span-2 space-y-6">
-<h5 class="font-label-caps text-label-caps uppercase tracking-widest text-primary">Support</h5>
-<ul class="space-y-4 text-secondary font-body-md">
-<li class="hover:text-primary hover:translate-x-1 transition-all cursor-pointer">Sustainability</li>
-<li class="hover:text-primary hover:translate-x-1 transition-all cursor-pointer">Trade Program</li>
-<li class="hover:text-primary hover:translate-x-1 transition-all cursor-pointer">Returns</li>
-<li class="hover:text-primary hover:translate-x-1 transition-all cursor-pointer">Contact Us</li>
-</ul>
-</div>
-<div class="col-span-12 md:col-span-4 space-y-6">
-<h5 class="font-label-caps text-label-caps uppercase tracking-widest text-primary">Newsletter</h5>
-<p class="text-xs text-secondary mb-4">Be the first to receive notifications about private collection viewings.</p>
-<div class="flex border-b border-outline-variant py-2">
-<input class="bg-transparent border-none focus:ring-0 w-full text-sm" placeholder="Your Email Address" type="email"/>
-<button class="material-symbols-outlined text-primary">arrow_forward</button>
-</div>
-</div>
-<div class="col-span-12 pt-16 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between gap-4">
-<p class="font-label-caps text-[10px] text-secondary">© 2024 AETERNA LUXURY ATELIER. ALL RIGHTS RESERVED.</p>
-<div class="flex gap-8 font-label-caps text-[10px] text-secondary uppercase">
-<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
-<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
-<a class="hover:text-primary transition-colors" href="#">Cookie Settings</a>
-</div>
-</div>
+<div class="px-margin-desktop py-8 max-w-container-max mx-auto border-t border-white/5">
+<p class="font-body-md text-on-primary-container/50 text-sm" data-i18n="footer.copy">© 2024 ARCANE INTERIORS. CRAFTED FOR PERFECTION.</p>
 </div>
 </footer>
+<!-- Bottom Navigation (Floating FABs) -->
+<div class="fixed bottom-8 right-8 flex flex-col gap-4 z-50">
+<button class="bg-primary dark:bg-primary-fixed text-on-primary dark:text-on-primary-fixed rounded-full p-4 shadow-xl hover:scale-110 hover:bg-secondary transition-all duration-300">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="bg-primary dark:bg-primary-fixed text-on-primary dark:text-on-primary-fixed rounded-full p-4 shadow-xl hover:scale-110 hover:bg-secondary transition-all duration-300">
+<span class="material-symbols-outlined">chat</span>
+</button>
+</div>
+<!-- i18n & Interactions Script -->
 <script>
-        // Micro-interactions and scroll effects
-        document.addEventListener('DOMContentLoaded', () => {
-            const header = document.querySelector('header');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    header.classList.add('py-4', 'h-16');
-                    header.classList.remove('h-20');
-                } else {
-                    header.classList.remove('py-4', 'h-16');
-                    header.classList.add('h-20');
+        const translations = {
+            EN: {
+                "nav.collections": "COLLECTIONS",
+                "nav.projects": "PROJECTS",
+                "nav.heritage": "HERITAGE",
+                "nav.studio": "STUDIO",
+                "nav.contact": "CONTACT",
+                "drawer.title": "ARCANE INTERIORS",
+                "home.hero_title": "Luxury Living Redefined",
+                "home.shop_now": "SHOP COLLECTION",
+                "home.curated": "CURATED SERIES",
+                "home.designer_collections": "Designer Collections",
+                "home.explore": "EXPLORE",
+                "home.collection_1": "The Heritage Suite",
+                "home.collection_1_desc": "A tribute to mid-century modernism with a contemporary soul.",
+                "home.collection_2": "Monolith Series",
+                "home.collection_2_desc": "Brutalist forms softened by tactile luxury and neutral tones.",
+                "home.collection_3": "Ethereal Living",
+                "home.collection_3_desc": "Designing spaces for tranquility, light, and mental clarity.",
+                "home.before_after": "Before & After",
+                "home.ba_desc": "Witness the evolution of ordinary spaces into Arcane masterpieces.",
+                "home.slide_view": "SLIDE TO VIEW",
+                "home.project_title": "Manhattan Penthouse",
+                "home.project_desc": "A complete structural and aesthetic overhaul focusing on maximizing natural light.",
+                "home.duration": "DURATION",
+                "home.location": "LOCATION",
+                "home.featured_products": "Featured Products",
+                "home.p1_name": "Aura Curved Sectional",
+                "home.p1_desc": "A sculptural centerpiece designed for fluid conversation.",
+                "home.best_seller": "BEST SELLER",
+                "home.p2_name": "Vertex Floor Lamp",
+                "home.p2_desc": "Precision engineered brass with hand-blown glass.",
+                "home.p3_name": "Travertine Side Table",
+                "home.concierge_title": "Bespoke Concierge",
+                "home.concierge_desc": "Consult with our lead designers for a tailored interior plan.",
+                "footer.about": "Crafting timeless spaces through architectural precision and tactile luxury since 1994.",
+                "footer.navigation": "NAVIGATION",
+                "footer.legal": "LEGAL",
+                "footer.social": "SOCIAL",
+                "footer.privacy": "PRIVACY",
+                "footer.terms": "TERMS",
+                "footer.instagram": "INSTAGRAM",
+                "footer.pinterset": "PINTEREST",
+                "footer.copy": "© 2024 ARCANE INTERIORS. CRAFTED FOR PERFECTION."
+            },
+            HY: {
+                "nav.collections": "ՀԱՎԱՔԱԾՈՒՆԵՐ",
+                "nav.projects": "ՆԱԽԱԳԾԵՐ",
+                "nav.heritage": "ԺԱՌԱՆԳՈՒԹՅՈՒՆ",
+                "nav.studio": "ՍՏՈՒԴԻԱ",
+                "nav.contact": "ԿԱՊ",
+                "drawer.title": "ԱՐՔԵՅՆ ԻՆՏԵՐԻԵՐ",
+                "home.hero_title": "Շքեղ Կյանքի Վերասահմանում",
+                "home.shop_now": "ԳՆՈՒՄՆԵՐ",
+                "home.curated": "ԸՆՏՐՎԱԾ ՇԱՐՔ",
+                "home.designer_collections": "Դիզայներական Հավաքածուներ",
+                "home.explore": "ԲԱՑԱՀԱՅՏԵԼ",
+                "home.collection_1": "Ժառանգության Սյուիտ",
+                "home.collection_1_desc": "Տուրք դասական մոդեռնիզմին ժամանակակից շնչով:",
+                "home.collection_2": "Մոնոլիթ Շարք",
+                "home.collection_2_desc": "Բրուտալիստական ձևեր՝ մեղմացված շքեղությամբ:",
+                "home.collection_3": "Եթերային Կյանք",
+                "home.collection_3_desc": "Տարածքներ՝ հանգստության և լույսի համար:",
+                "home.before_after": "Առաջ և Հետո",
+                "home.ba_desc": "Տեսեք սովորական տարածքների վերափոխումը գլուխգործոցների:",
+                "home.slide_view": "ՍԱՀԵՑՐԵՔ",
+                "home.project_title": "Մանհեթենի Պենտհաուս",
+                "home.project_desc": "Կառուցվածքային և գեղագիտական ամբողջական վերափոխում:",
+                "home.duration": "ՏԵՎՈՂՈՒԹՅՈՒՆ",
+                "home.location": "ՎԱՅՐ",
+                "home.featured_products": "Ընտրված Ապրանքներ",
+                "home.p1_name": "Աուրա Բազմոց",
+                "home.p1_desc": "Քանդակային կենտրոն՝ նախատեսված հարմարավետության համար:",
+                "home.best_seller": "ԲԵՍԹՍԵԼԵՐ",
+                "home.p2_name": "Վերտեքս Լամպ",
+                "home.p2_desc": "Ճշգրիտ ինժեներական արույր և փչովի ապակի:",
+                "home.p3_name": "Տրավերտինե Սեղան",
+                "home.concierge_title": "Անհատական Ծառայություն",
+                "home.concierge_desc": "Խորհրդակցեք մեր առաջատար դիզայներների հետ:",
+                "footer.about": "Ստեղծելով հավերժական տարածքներ 1994 թվականից:",
+                "footer.navigation": "ՆԱՎԻԳԱՑԻԱ",
+                "footer.legal": "ԻՐԱՎԱԿԱՆ",
+                "footer.social": "ՍՈՑԻԱԼԱԿԱՆ",
+                "footer.privacy": "ԳԱՂՏՆԻՈՒԹՅՈՒՆ",
+                "footer.terms": "ՊԱՅՄԱՆՆԵՐ",
+                "footer.instagram": "ԻՆՍՏԱԳՐԱՄ",
+                "footer.pinterset": "ՓԻՆԹԵՐԵՍԹ",
+                "footer.copy": "© 2024 ԱՐՔԵՅՆ ԻՆՏԵՐԻԵՐ: ԿԱՏԱՐԵԼՈՒԹՅՈՒՆ:"
+            },
+            RU: {
+                "nav.collections": "КОЛЛЕКЦИИ",
+                "nav.projects": "ПРОЕКТЫ",
+                "nav.heritage": "НАСЛЕДИЕ",
+                "nav.studio": "СТУДИЯ",
+                "nav.contact": "КОНТАКТЫ",
+                "drawer.title": "ARCANE INTERIORS",
+                "home.hero_title": "Роскошь в Новом Прочтении",
+                "home.shop_now": "МАГАЗИН",
+                "home.curated": "КУРАТОРСКАЯ СЕРИЯ",
+                "home.designer_collections": "Дизайнерские Коллекции",
+                "home.explore": "ОТКРЫТЬ",
+                "home.collection_1": "Наследие",
+                "home.collection_1_desc": "Дань модернизму середины века с современной душой.",
+                "home.collection_2": "Серия Монолит",
+                "home.collection_2_desc": "Бруталистские формы, смягченные роскошью.",
+                "home.collection_3": "Эфирная Жизнь",
+                "home.collection_3_desc": "Пространства для спокойствия и света.",
+                "home.before_after": "До и После",
+                "home.ba_desc": "Свидетельство превращения обычных мест в шедевры.",
+                "home.slide_view": "ЛИСТАЙТЕ",
+                "home.project_title": "Пентхаус на Манхэттене",
+                "home.project_desc": "Полное обновление структуры и эстетики.",
+                "home.duration": "ДЛИТЕЛЬНОСТЬ",
+                "home.location": "ЛОКАЦИЯ",
+                "home.featured_products": "Лучшие Товары",
+                "home.p1_name": "Диван Аура",
+                "home.p1_desc": "Скульптурный центр для комфортного общения.",
+                "home.best_seller": "БЕСТСЕЛЛЕР",
+                "home.p2_name": "Торшер Вертекс",
+                "home.p2_desc": "Высокоточная латунь и выдувное стекло.",
+                "home.p3_name": "Столик из Травертина",
+                "home.concierge_title": "Консьерж-сервис",
+                "home.concierge_desc": "Консультации с ведущими дизайнерами.",
+                "footer.about": "Создаем вневременные пространства с 1994 года.",
+                "footer.navigation": "НАВИГАЦИЯ",
+                "footer.legal": "ПРАВОВОЕ",
+                "footer.social": "СОЦСЕТИ",
+                "footer.privacy": "ПРИВАТНОСТЬ",
+                "footer.terms": "УСЛОВИЯ",
+                "footer.instagram": "ИНСТАГРАМ",
+                "footer.pinterset": "ПИНТЕРЕСТ",
+                "footer.copy": "© 2024 ARCANE INTERIORS. СОВЕРШЕНСТВО ВО ВСЕМ."
+            }
+        };
+
+        function switchLanguage(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerText = translations[lang][key];
                 }
             });
+            document.getElementById('lang-switch').innerText = lang;
+            document.getElementById('lang-menu').classList.add('hidden');
+            localStorage.setItem('arcane_lang', lang);
+        }
 
-            // Smooth reveal for product cards
-            const cards = document.querySelectorAll('.masonry-item');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-[fadeInUp_0.8s_ease-out_forwards]');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
+        function toggleLangMenu() {
+            document.getElementById('lang-menu').classList.toggle('hidden');
+        }
 
-            cards.forEach(card => {
-                card.style.opacity = '0';
-                observer.observe(card);
+        function handleSlider(slider, id) {
+            const overlay = document.getElementById(`ba-overlay-${id}`);
+            overlay.style.width = `${slider.value}%`;
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('arcane_lang') || 'EN';
+            switchLanguage(savedLang);
+
+            // Drawer Toggle
+            const menuBtn = document.querySelector('header button');
+            const drawer = document.getElementById('mobile-drawer');
+            menuBtn.addEventListener('click', () => {
+                drawer.classList.toggle('-translate-x-full');
+            });
+
+            // Close drawer on outside click
+            document.addEventListener('click', (e) => {
+                if (!drawer.contains(e.target) && !menuBtn.contains(e.target)) {
+                    drawer.classList.add('-translate-x-full');
+                }
+                if (!document.getElementById('lang-switch').contains(e.target) && !document.getElementById('lang-menu').contains(e.target)) {
+                    document.getElementById('lang-menu').classList.add('hidden');
+                }
             });
         });
-
-        // Keyframe animations injection
-        const style = document.createElement('style');
-        style.innerHTML = `
-            @keyframes fadeInUp {
-                from { opacity: 0; transform: translateY(20px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
-        
+    </script>
+</body></html>
